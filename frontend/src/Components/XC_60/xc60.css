@@ -3,7 +3,6 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
-
 .xc60_Hero{
     position: relative;
     height: 87vh;
@@ -18,6 +17,10 @@ body{
         display: block;
         height: 70%;
     }
+    img:hover{
+        transition:  .3s ease;
+        border-radius: 20px;
+    }
     p{
         position: absolute;
         left: 50%;
@@ -26,5 +29,201 @@ body{
         width: max-content;
         font-size: 1.7rem;
         color: white;
+    }
+}
+.xc60_Features{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+}
+.xc60_features_Images{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 4.4vw);
+    gap: 5px;
+    height: 80vh;
+    width: 35vw;
+
+    #xc60_Img1{
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #xc60_Img1:hover, #xc60_Img2a:hover, #xc60_Img2b:hover, #xc60_Img3:hover{
+        transform: scale(1.02);
+        transition: .5s ease-in-out;
+    }
+    #xc60_Img2a{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #xc60_Img2b{
+        grid-column-start: 5;
+        grid-column-end: 9;
+        grid-row-start: 3;
+        grid-row-end: 6;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    #xc60_Img3{
+        grid-column-start: 1;
+        grid-column-end: 9;
+        grid-row-start: 6;
+        grid-row-end: 9;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.xc60_features_desc{
+    display: flex;
+    height: 80vh;
+    width: 50vw;
+
+    p{
+        color: white;
+    }
+    #para_1_heading{
+        color: white;
+        font-size: 1.5rem;
+    }
+    #para_1{
+        position: absolute;
+        font-size: 1.2rem;
+        top: 11%;
+        display: block;
+        align-items: center;
+        width: 100%;
+        right: -50%;
+        color: rgb(116, 115, 115);
+        font-weight: bold;
+    }
+    #para_1_heading{
+        color: white;
+        font-size: 1.5rem;
+    }
+    #para_2{
+        position: absolute;
+        font-size: 1.2rem;
+        top: 35%;
+        right: -50%;
+        width: 100%;
+    }
+    #para_3{
+        position: absolute;
+        font-size: 1.2rem;
+        top: 35%;
+        right: -75%;
+        width: 100%;
+    }
+    #para_4{
+        position: absolute;;
+        font-size: 1.2rem;
+        right: -50%;
+        top: 65%;
+        width: 100%;
+    }
+    #para_5{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        right: -50%;
+        top: 83%;
+        width: 100%;
+
+        #amount{
+            font-size: 1.4rem;
+        }
+    }
+    #span_txt{
+        color: rgb(116, 115, 115);
+        font-weight: bold;
+    }
+}
+.xc60_Bookings{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.Booking_Section1{
+    width: 40vw;
+    height: 70vh;
+
+    p{
+        font-size: 2rem;
+        color: white;
+    }
+    #book_Sect_txt{
+        font-size: 1.3rem;
+        color: rgb(116, 115, 115);
+    }
+    #book_1{
+        margin-top: 3%;
+        margin-left: 1%;
+        position: absolute;
+    }
+    #book_2{
+        margin-left: 1%;
+        margin-top: 17%;
+        position: absolute;
+    }
+    #Btn_Book{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin-top: 10%;
+        margin-left: 1%;
+        font-size: 1.3rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        background-color: white;
+    }
+    #Btn_Book:hover, #Btn_Test:hover{
+        transition: .2s ease;
+        background-color: aliceblue;
+    }
+    #Btn_Test{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        margin-top: 27%;
+        margin-left: 1%;
+        font-size: 1.3rem;
+        padding: 5px;
+        border-radius: 5px;
+        border: none;
+        font-weight: bold;
+        background-color: white;
+    }
+}
+.Booking_Section2{
+    width: 50vw;
+    height: 70vh;
+    
+    img{
+        width: 100%;
+        height: 100%;
+    }
+    img:hover{
+        transition:  .3s ease;
+        border-radius: 10px;
     }
 }

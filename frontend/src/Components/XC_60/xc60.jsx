@@ -1,5 +1,5 @@
 import Header from '../Header/Header'
-import Xc60Img from '../Assets/xc60.png'
+import Xc60Img from '../Assets/xc60.jpg'
 import Xc60_row1 from '../Assets/xc60_row1.png'
 import Xc60_row2a from '../Assets/xc60_row2a.png'
 import Xc60_row2b from '../Assets/xc60_row2b.png'

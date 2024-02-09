@@ -7,12 +7,13 @@
    text-decoration: none;
 }
 .header{
-   position: relative;
+   position: absolute;
    display: flex;
    align-items: center;
    height: 12vh;
    width: 100vw;
-   background-color: #0e0e0e;
+   background: transparent;
+   z-index: 1;
    
 }
 .Logo_ {

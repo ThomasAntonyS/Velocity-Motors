@@ -1,15 +1,17 @@
 import './App.css';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
-import Xc60 from './Components/XC_60/xc60';
-import Login from './Components/Login/Login';
+import Login from './Components/Login/Login'
+import Register from './Components/Register/Register'
+import V_60 from './Components/v60/v60';
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login/>}/>
-          <Route path='/xc60' element={<Xc60/>}/>
+          <Route path='/login' element={<Login/>}/>
+          <Route path='/register' element={<Register/>}/>
+          <Route path='/v60' element={<V_60/>}/>
         </Routes>
       </BrowserRouter>
     </div>

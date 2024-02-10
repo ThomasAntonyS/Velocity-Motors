@@ -1,9 +1,11 @@
 import './Login.css'
 import {Link} from 'react-router-dom'
+import {ArrowCircleRightSharp} from '@mui/icons-material'
 
 function Login(){
     return(
         <div className="login">
+            <Link to='/' id='back_to_home'><span>Back to Home</span><ArrowCircleRightSharp/></Link>
             <div className="login_content">
             <div className="left"></div>
                 <div className="right">
@@ -14,7 +16,7 @@ function Login(){
                         <input type="text" placeholder="Email" />
                         <input type="text" placeholder="Password"  />
                         <button >Log in</button>
-                        <Link to='/xc60'>Hi</Link>
+                        <Link to='/register' id='register_navigation'>Don't have an account ?</Link>
                     </form>
                  </div>
         </div>

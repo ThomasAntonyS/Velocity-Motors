@@ -16,7 +16,7 @@ export default function MenuItems() {
   };
 
   return (
-    <div>
+    <div className='menu_bar'>
       <Button
         id="Menu_Button"
         aria-controls={open ? 'demo-positioned-menu' : undefined}
@@ -28,7 +28,7 @@ export default function MenuItems() {
       </Button>
       
       <Menu
-        id="demo-positioned-menu"
+        id="_menu"
         aria-labelledby="Menu_Button"
         anchorEl={anchorEl}
         open={open}
@@ -40,6 +40,10 @@ export default function MenuItems() {
         transformOrigin={{
           vertical: 'top',
           horizontal: 'left',
+        }}
+        sx={{
+          marginLeft:'-40px',
+          overflow:'hidden'
         }}
       >
         <button id='close_btn' onClick={handleClose}><Close/></button>

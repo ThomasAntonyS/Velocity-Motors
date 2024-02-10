@@ -1,7 +1,7 @@
-.v_60{
+.s_90{
     background-color: #0e0e0e;
 
-    .v60_Hero{
+    .s90_Hero{
         position: relative;
         height: 100vh;
         min-width: 100vw;
@@ -24,22 +24,22 @@
             font-size: 1.7rem;
             color: white;
         }
-        #xc{
+        #s90{
             background-color: #0e0e0e;
             width: 100%;
             padding-top: 20px;
             margin-top: -10px;
         }
     }
-    .v60_Features{
+    .s90_Features{
         position: relative;
+        height: 100vh;
+        width:  100vw;
         display: flex;
         align-items: center;
         justify-content: space-around;
-        height: 100vh;
-        width: 100vw;
     }
-    .v60_features_Images{
+    .s90_features_Images{
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         grid-template-rows: repeat(8, 4.4vw);
@@ -47,48 +47,51 @@
         height: 80vh;
         width: 35vw;
     
-        #v60_Img1{
+        #s90_Img1{
             grid-column-start: 1;
             grid-column-end: 9;
             grid-row-start: 1;
-            grid-row-end: 3;
+            grid-row-end: 4;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            object-position: center;
         }
-        #v60_Img1:hover, #v60_Img2a:hover, #v60_Img2b:hover, #v60_Img3:hover{
+        #s90_Img1:hover, #s90_Img2:hover, #s90_Img3a:hover, #s90_Img3b:hover{
             transform: scale(1.02);
             transition: .5s ease-in-out;
         }
-        #v60_Img2a{
+        #s90_Img2{
             grid-column-start: 1;
             grid-column-end: 5;
-            grid-row-start: 3;
+            grid-row-start: 4;
             grid-row-end: 6;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        #v60_Img2b{
+        
+        #s90_Img3a{
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 6;
+            grid-row-end: 9;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+        #s90_Img3b{
             grid-column-start: 5;
             grid-column-end: 9;
-            grid-row-start: 3;
-            grid-row-end: 6;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        #v60_Img3{
-            grid-column-start: 1;
-            grid-column-end: 9;
-            grid-row-start: 6;
+            grid-row-start: 4;
             grid-row-end: 9;
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
     }
-    .v60_features_desc{
+    .s90_features_desc{
         display: flex;
         height: 80vh;
         width: 50vw;
@@ -103,11 +106,11 @@
         #para_1{
             position: absolute;
             font-size: 1.2rem;
-            top: 11%;
+            top: 14%;
             display: block;
             align-items: center;
             width: 100%;
-            right: -50%;
+            left: 5%;
             color: rgb(116, 115, 115);
             font-weight: bold;
         }
@@ -116,33 +119,26 @@
             font-size: 1.5rem;
         }
         #para_2{
-            position: absolute;
+            position: absolute;;
             font-size: 1.2rem;
+            left: 5%;
             top: 35%;
-            right: -50%;
             width: 100%;
         }
         #para_3{
-            position: absolute;
+            position: absolute;;
             font-size: 1.2rem;
-            top: 35%;
-            right: -75%;
+            left: 5%;
+            top: 60%;
             width: 100%;
         }
         #para_4{
-            position: absolute;;
-            font-size: 1.2rem;
-            right: -50%;
-            top: 65%;
-            width: 100%;
-        }
-        #para_5{
             position: absolute;
             display: flex;
             align-items: center;
             font-weight: bold;
-            right: -50%;
-            top: 83%;
+            left: 5%;
+            top: 80%;
             width: 100%;
     
             #amount{
@@ -154,7 +150,7 @@
             font-weight: bold;
         }
     }
-    .v60_feat_visual{
+    .s90_feat_visual{
         height: 100vh;
         display: flex;
         align-items: center;
@@ -206,7 +202,7 @@
             }
         }
     }
-    .v60_Bookings{
+    .s90_Bookings{
         width: 100vw;
         height: 100vh;
         display: flex;
@@ -274,6 +270,7 @@
         img{
             width: 100%;
             height: 99%;
+            object-fit: cover;
         }
         img:hover{
             transition:  .3s ease;

@@ -1,77 +1,64 @@
 import Header from '../Header/Header'
-import v60Img from '../Assets/v60.avif'
-import v60_row1 from '../Assets/v60_row1.png'
-import v60_row2a from '../Assets/v60_row2a.png'
-import v60_row2b from '../Assets/v60_row2b.png'
-import v60_row3 from '../Assets/v60_row3.png'
-import v60_Booking from '../Assets/v60_book.avif'
+import s90Img from '../Assets/s90_hero.avif'
+import s90_row1 from '../Assets/s90_row1.avif'
+import s90_row2 from '../Assets/s90_row2a.avif'
+import s90_row3a from '../Assets/s90_row3a.avif'
+import s90_row3b from '../Assets/s90_row3b.webp'
+import s90_Booking from '../Assets/s90_hero.avif'
 import {CurrencyRupee,ArrowRight} from '@mui/icons-material'
 import Lane_assist from '../Assets/lane_assist.mp4'
 import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
-import './v60.css'
+import './s90.css'
 
-function v60(){
+function S90(){
     return(
-        <div className='v_60'>
+        <div className='s_90'>
             <Header/>
-            <div className="v60_Hero">
-                <img src={v60Img} alt="v60Img" />
+            <div className="s90_Hero">
+                <img src={s90Img} alt="s90Img" />
                 <br />
                 <center>
-                <p id='xc'><b>Intuitively yours.</b> Advanced technology helps connect your drive to <br />
-                    personalised comfort and mobility</p>
+                <p id='s90'><b>Expect more.</b>Embrace the new and control the journey. Meet our luxury sedan with<br />
+                    Google built-in*.</p>
                 </center>
             </div>
 
-            <div className="v60_Features">
-                <div className="v60_features_Images">
-                    <img src={v60_row1} alt="v60_Img" id="v60_Img1" />
-                    <img src={v60_row2a} alt="v60_Img" id="v60_Img2a" />
-                    <img src={v60_row2b} alt="v60_Img" id="v60_Img2b" />
-                    <img src={v60_row3} alt="v60_Img" id="v60_Img3" />
-                </div>
-
-                <div className="v60_features_desc">
-                    <p id='para_1'><span id='para_1_heading'><b>Immerse yourself in a premium
-                    experience. </b><br /></span>
-                    XC60 is a popular and well-regarded vehicle known for <br />
-                    its combination of safety features, comfort, and <br />
-                    Scandinavian design aesthetics.</p>
+            <div className="s90_Features">
+            <div className="s90_features_desc">
+                    <p id='para_1'><span id='para_1_heading'><b>Indulge your senses.</b><br /></span>
+                    Exclusive interior design details and high-end comfort<br />
+                    make every mile a pleasure. <br />
+                    </p>
 
                     <br />
 
-                    <p id='para_2'><b>A refined drive </b><br />
-                    <span id='span_txt'>Enjoy smooth take-offs,<br />
-                    refined acceleration and<br />
-                    the optimised efficiency<br />
-                    and comfort of start/stop<br />
-                    technology.<br />
-                    </span></p>
-
-                    <p id='para_3'><b>Lower fuel consumption </b><br />
-                    <span id='span_txt'>The integrated starter<br />
-                    supports the engine and<br />
-                    reduces fuel consumption<br />
-                    while delivering relaxed and<br />
-                    controlled drive.<br />
+                    <p id='para_2'><b>Mobility refined</b><br />
+                    <span id='span_txt'>The XC90 mild hybrid has been engineered to deliver<br />
+                    smooth take-offs and refined acceleration, making both<br />
+                    city and highway journeys more refined.<br />
                     </span></p>
 
                     
-                    <p id='para_4'><b>Velocity with Google built in </b><br />
+                    <p id='para_3'><b>All data included</b><br />
                     <span id='span_txt'>
-                    Your Velocity with Google built in
-                    is seamlessly integrated for a <br />
-                    uniquely helpful, connected, and
-                    more streamlined driving <br />
-                    experience.
+                    With all data included, our Digital services package<br />
+                    conveniently harmonises you, your S90 and your digital<br />
+                    life.
                     </span></p>
                     
-                    <p id='para_5'>Volvo V60 - Available at <CurrencyRupee/><span id='amount'>1,56,000</span></p>
+                    <p id='para_4'>Volvo S90 - Available at <CurrencyRupee/><span id='amount'>1,56,000</span></p>
+                </div>
+
+                <div className="s90_features_Images">
+                    <img src={s90_row1} alt="s90_Img" id="s90_Img1" />
+                    <img src={s90_row2} alt="s90_Img" id="s90_Img2" />
+                    <img src={s90_row3b} alt="s90_Img" id="s90_Img3a" />
+                    <img src={s90_row3a} alt="s90_Img" id="s90_Img3b" />
                 </div>
             </div>
 
-            <div className="v60_feat_visual">
+            <div className="s90_feat_visual">
                 <div className="visual_feature1">
                     <video src={Lane_assist} autoPlay loop></video>
                     <center>
@@ -111,7 +98,7 @@ function v60(){
                 </div>
             </div>
             
-            <div className="v60_Bookings">
+            <div className="s90_Bookings">
                     <div className="Booking_Section1">
                         <p id='book_1'><b>Book now</b> <br />
                         <span id='book_Sect_txt'>Book now to avail exciting offers.
@@ -125,11 +112,11 @@ function v60(){
                     </div>
 
                     <div className="Booking_Section2">
-                        <img src={v60_Booking} alt="v60 Booking" />
+                        <img src={s90_Booking} alt="s90 Booking" />
                     </div>
             </div>
             
         </div>
     )
 }
-export default v60;
+export default S90;

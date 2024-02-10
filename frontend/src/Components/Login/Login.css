@@ -8,7 +8,7 @@
     position: absolute;
     right: 4%;
     top: 2%;
-    color: rgb(0, 0, 0);
+    color: black;
 
     span{
       margin-right: 2px;
@@ -95,7 +95,7 @@
       text-align: center;
       padding: 15px 40px;
       margin: 20px 2px;
-      background-color: #b08bf8;
+      background-color: #0B60B0;
       color: #fff;
       font-size: 14px;
       font-weight: 500;

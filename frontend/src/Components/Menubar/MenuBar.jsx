@@ -4,6 +4,7 @@ import Menu from '@mui/material/Menu';
 import { MenuItem } from '@mui/material';
 import { Segment,Facebook,YouTube,Twitter,Close } from '@mui/icons-material';
 import './Menubar.css'
+import { Link } from 'react-router-dom';
 
 export default function MenuItems() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -47,7 +48,7 @@ export default function MenuItems() {
         }}
       >
         <button id='close_btn' onClick={handleClose}><Close/></button>
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
+        <MenuItem><Link to='/register'>Register</Link></MenuItem>
         <MenuItem onClick={handleClose}>My account</MenuItem>
         <MenuItem onClick={handleClose}>Logout</MenuItem>
         <MenuItem onClick={handleClose}>Profile</MenuItem>

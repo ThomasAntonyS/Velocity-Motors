@@ -32,8 +32,7 @@
    }
    .Menu_Icon{
       position: absolute;
-      right: 4%;
-      overflow: hidden;
+      right: 0%;
       
       button{
          border: none;

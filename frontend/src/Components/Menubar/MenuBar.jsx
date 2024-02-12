@@ -1,10 +1,10 @@
 import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
-import { MenuItem } from '@mui/material';
+import { MenuItem} from '@mui/material';
 import { Segment,Facebook,YouTube,Twitter,Close } from '@mui/icons-material';
-import './Menubar.css'
 import { Link } from 'react-router-dom';
+import './Menubar.css'
 
 export default function MenuItems() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -34,14 +34,6 @@ export default function MenuItems() {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        anchorOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
-        transformOrigin={{
-          vertical: 'top',
-          horizontal: 'left',
-        }}
         sx={{
           marginLeft:'-40px',
           overflow:'hidden'

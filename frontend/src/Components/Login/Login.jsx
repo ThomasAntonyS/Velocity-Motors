@@ -15,7 +15,7 @@ function Login(){
         event.preventDefault();
         try {  
             axios.post('http://localhost:3001/login',[email,password])
-            navigate('/')
+            navigate('/v60')
         } catch (error) {
             console.log(error);
         }
@@ -31,8 +31,8 @@ function Login(){
                     <p>Welcome back! Log in to your account.</p>
          
                     <form onSubmit={handleLogin}>
-                        <input type="email" placeholder="Email" onChange={e=>(setEmail(e.target.value))}/>
-                        <input type="password" placeholder="Password" onChange={e=>(setPassword(e.target.value))}/>
+                        <input type="email" placeholder="Email" onChange={e=>(setEmail(e.target.value))} required/>
+                        <input type="password" placeholder="Password" onChange={e=>(setPassword(e.target.value))} required/>
                         <button >Log in</button>
                         <Link to='/register' id='register_navigation'>Don't have an account ?</Link>
                     </form>

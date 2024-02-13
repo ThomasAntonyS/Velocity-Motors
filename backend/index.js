@@ -28,7 +28,20 @@ app.post('/register',(req,res)=>{
     })
 })
 
-
+app.post('/login',(req,res)=>{
+    const sql = "SELECT FROM signIn_signUp WHERE `email`=? AND `password`=? "
+    const emailLogin=req.body[0]
+    const passwordLogin=req.body[1]
+    values=[emailLogin,passwordLogin]
+    console.log(values)
+    db.query(sql,(values),(err,data)=>{
+        if(err){ 
+            console.log(err)
+            return res.json(err)
+        }
+        return res.json(data)
+    })
+})
 
 
 app.listen(3001,()=>{

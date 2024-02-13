@@ -5,7 +5,7 @@
         position: relative;
         height: 100vh;
         min-width: 100vw;
-        overflow-y: hidden;
+        overflow-x: hidden;
     
         img{
             position: absolute;
@@ -37,7 +37,7 @@
         width:  100vw;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .s90_features_Images{
         display: grid;
@@ -94,7 +94,7 @@
     .s90_features_desc{
         display: flex;
         height: 80vh;
-        width: 50vw;
+        width: 40vw;
     
         p{
             color: white;
@@ -110,7 +110,7 @@
             display: block;
             align-items: center;
             width: 100%;
-            left: 5%;
+            left: 9%;
             color: rgb(116, 115, 115);
             font-weight: bold;
         }
@@ -121,14 +121,14 @@
         #para_2{
             position: absolute;;
             font-size: 1.2rem;
-            left: 5%;
+            left: 9%;
             top: 35%;
             width: 100%;
         }
         #para_3{
             position: absolute;;
             font-size: 1.2rem;
-            left: 5%;
+            left: 9%;
             top: 60%;
             width: 100%;
         }
@@ -137,7 +137,7 @@
             display: flex;
             align-items: center;
             font-weight: bold;
-            left: 5%;
+            left: 9%;
             top: 80%;
             width: 100%;
     

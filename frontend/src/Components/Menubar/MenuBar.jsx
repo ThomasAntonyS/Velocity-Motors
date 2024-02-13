@@ -35,8 +35,9 @@ export default function MenuItems() {
         open={open}
         onClose={handleClose}
         sx={{
-          marginLeft:'-40px',
-          overflow:'hidden'
+          marginLeft:'-50px',
+          marginTop:'-40px'
+          
         }}
       >
         <button id='close_btn' onClick={handleClose}><Close/></button>

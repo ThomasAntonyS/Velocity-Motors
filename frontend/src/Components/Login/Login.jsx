@@ -12,13 +12,15 @@ function Login(){
     const [password,setPassword] = useState('')
 
     const handleLogin=(event)=>{
-        event.preventDefault();
-        try {  
-            axios.post('http://localhost:3001/login',[email,password])
+        event.preventDefault(); 
+        axios.post('http://localhost:3001/login',[email,password])
+        .then(res=>{
+            if(res.data==='Success')
             navigate('/v60')
-        } catch (error) {
-            console.log(error);
-        }
+            else
+            alert("No registered account...")
+        })
+        .catch(err=>console.log(err))
     }
 
     return(

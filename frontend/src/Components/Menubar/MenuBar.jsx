@@ -36,19 +36,21 @@ export default function MenuItems() {
         onClose={handleClose}
         sx={{
           marginLeft:'-50px',
-          marginTop:'-40px'
-          
+          marginTop:'-45px'
         }}
       >
         <button id='close_btn' onClick={handleClose}><Close/></button>
-        <MenuItem><Link to='/register'>Register</Link></MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <Facebook/> <YouTube/> <Twitter/>
+        <MenuItem><Link to='/' style={{color:'black'}}>Home</Link></MenuItem>
+        <MenuItem><Link to='/' style={{color:'black'}}>Cars</Link></MenuItem>
+        <MenuItem><Link to='/login' style={{color:'black'}}>Login</Link></MenuItem>
+        <MenuItem><Link to='/register' style={{color:'black'}}>register</Link></MenuItem>
+        <MenuItem><Link to='/test_drive' style={{color:'black'}}>Test Drive</Link></MenuItem>
+        <MenuItem><Link to='/book_now' style={{color:'black'}}>Book Now</Link></MenuItem>
+        <MenuItem><Link to='/' style={{color:'black'}}>Contact</Link></MenuItem>
+        <MenuItem sx={{
+          alignItems:'center',
+          justifyContent:"space-around"
+        }}><Facebook/> <YouTube/> <Twitter/></MenuItem>
       </Menu>
     </div>
   );

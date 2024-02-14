@@ -1,0 +1,67 @@
+.contact_{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: black;
+    height: 60vh;
+    color: white;
+
+    .left{
+        height: 90%;
+        width: 40%;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(8,vw);
+        gap: 10px;
+
+        p{
+            font-size: 2.5rem;
+            font-weight: bolder;
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 1;
+            grid-row-end: 2;
+            width: 100%;
+            height: 100%;
+        }
+        #contactName{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            width: 100%;
+            height: 100%;
+        }
+        #contactEmail{
+            grid-column-start: 4;
+            grid-column-end: 8;
+            grid-row-start: 3;
+            grid-row-end: 4;
+            width: 100%;
+            height: 100%;
+        }
+        #contactMessage{
+            grid-column-start: 1;
+            grid-column-end: 8;
+            grid-row-start: 4;
+            grid-row-end: 7;
+            width: 90%;
+            height: 100%;
+        }
+        input{
+
+        }
+        textarea{
+            
+        }
+    }
+    .right{
+        height: 90%;
+        width: 40%;
+        border: 2px solid green;
+        display: grid;
+        grid-template-columns: repeat(8,1fr);
+        grid-template-rows: repeat(8,vw);
+
+    }
+}

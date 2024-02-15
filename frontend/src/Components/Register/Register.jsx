@@ -36,7 +36,7 @@ function Register(){
                     <p>Lets Sign Up.</p>
          
                     <form onSubmit={handleSubmit}>
-                        <input type="text" placeholder="Name" onChange={e=>SetUsername(e.target.value)} required/>
+                        <input type="text" placeholder="Name" onChange={e=>SetUsername(e.target.value)} required />
                         <input type="email" placeholder="Email" onChange={e=>SetEmail(e.target.value)} required/>
                         <input type="password" placeholder="Password"  id='first_passowrd' required/>
                         <input type="password" placeholder="Confirm Password" id='second_passowrd' onChange={e=>SetPassword(e.target.value)} required/>

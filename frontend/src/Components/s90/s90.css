@@ -46,6 +46,7 @@
         gap: 5px;
         height: 80vh;
         width: 35vw;
+        z-index: 2;
     
         #s90_Img1{
             grid-column-start: 1;

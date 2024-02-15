@@ -16,10 +16,11 @@ const db =mysql.createConnection({
 
 app.post('/register',(req,res)=>{
     const sql = "INSERT INTO signIn_signUp (`username`,`email`,`password`) values (?,?,?)"
-    const username=req.body[0]
-    const email=req.body[1]
-    const password=req.body[2]
-    values=[username,email,password]
+    const values =[
+        username=req.body[0],
+        email=req.body[1],
+        password=req.body[2]
+    ]
     db.query(sql,(values),(err,data)=>{
         console.log(data);
         if(err) return false
@@ -29,9 +30,10 @@ app.post('/register',(req,res)=>{
 
 app.post('/login',(req,res)=>{
     const sql = "SELECT `username`,`password` FROM signIn_signUp WHERE `email`=? AND `password`=? "
-    const emailLogin=req.body[0]
-    const passwordLogin=req.body[1]
-    values=[emailLogin,passwordLogin]
+    const values =[
+        emailLogin=req.body[0],
+        passwordLogin=req.body[1]
+    ]
     db.query(sql,(values),(err,data)=>{
         if(err){ 
             console.log(err)
@@ -47,6 +49,22 @@ app.post('/login',(req,res)=>{
     })
 })
 
+app.post('/test_drive',(req,res)=>{
+    const sql = "INSERT INTO test_drive (`name`,`email`,`phone`,`model`) values (?,?,?,?)"
+    const testD_values = [
+        nameTd = req.body[0],
+        emailTd = req.body[1],
+        phoneTd = req.body[2],
+        modelTd = req.body[3]
+    ]
+    db.query(sql,(testD_values),(err,data)=>{
+        if(err){
+            console.log(err)
+            return res.json("Fail")
+        }
+        return res.json('Success')
+    })
+})
 
 app.listen(3001,()=>{
     console.log("Backend Connected...")

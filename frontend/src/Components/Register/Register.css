@@ -1,6 +1,7 @@
 .register{
     height: 100vh;
     width: 100vw;
+    background-color: rgba(229, 229, 229, 0.578);
   
     #back_to_home{
       display: flex;
@@ -12,7 +13,7 @@
 
       span{
         margin-right: 2px;
-        font-weight: bold;
+        font-weight: bold; 
       }
     }
     .register_content{

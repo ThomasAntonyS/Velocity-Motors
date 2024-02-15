@@ -1,7 +1,7 @@
 import './Login.css'
 import {Link} from 'react-router-dom'
 import {ArrowCircleRightSharp} from '@mui/icons-material'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ function Login(){
         axios.post('http://localhost:3001/login',[email,password])
         .then(res=>{
             if(res.data==='Success')
-            navigate('/v60')
+            navigate('')
             else
             alert("No registered account...")
         })
@@ -35,7 +35,7 @@ function Login(){
                     <form onSubmit={handleLogin}>
                         <input type="email" placeholder="Email" onChange={e=>(setEmail(e.target.value))} required/>
                         <input type="password" placeholder="Password" onChange={e=>(setPassword(e.target.value))} required/>
-                        <button >Log in</button>
+                        <button>Log in</button>
                         <Link to='/register' id='register_navigation'>Don't have an account ?</Link>
                     </form>
                  </div>

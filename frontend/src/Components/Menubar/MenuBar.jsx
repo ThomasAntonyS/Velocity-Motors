@@ -40,18 +40,28 @@ export default function MenuItems() {
         }}
       >
         <button id='close_btn' onClick={handleClose}><Close/></button>
+
         <MenuItem><Link to='/' style={{color:'black'}}>Home</Link></MenuItem>
+
         <MenuItem><Link to='/' style={{color:'black'}}>Cars</Link></MenuItem>
+
         <MenuItem><Link to='/login' style={{color:'black'}}>Login</Link></MenuItem>
+
         <MenuItem><Link to='/register' style={{color:'black'}}>Register</Link></MenuItem>
+
         <MenuItem><Link to='/test_drive' style={{color:'black'}}>Test Drive</Link></MenuItem>
+
         <MenuItem><Link to='/book_now' style={{color:'black'}}>Book Now</Link></MenuItem>
+
         <MenuItem><Link to='/' style={{color:'black'}}>Contact</Link></MenuItem>
+
         <MenuItem sx={{
           alignItems:'center',
           justifyContent:"space-around"
         }}><Facebook/> <YouTube/> <Twitter/></MenuItem>
+        
       </Menu>
+
     </div>
   );
 }

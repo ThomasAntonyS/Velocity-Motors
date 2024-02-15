@@ -16,10 +16,15 @@ export default function Contact(){
             <div className="left">
                 <p>Contact Us</p>
                 <div className="underline"></div>
+
                 <input type="text" id='contactName' placeholder='Name'/>
+
                 <input type="email" id='contactEmail' placeholder='Email'/>
+
                 <textarea cols="20" rows="5" id='contactMessage' placeholder='Message'></textarea>
+
                 <button>Notify Us</button>
+                
             </div>
 
             <div className="center"></div>
@@ -30,7 +35,7 @@ export default function Contact(){
 
                 <br />
 
-                <p id='Or_txt'>-----------------</p>
+                <p id='Or_txt'>----------------------------</p>
 
                 <br />
 

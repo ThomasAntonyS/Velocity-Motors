@@ -9,6 +9,7 @@ import {CurrencyRupee,ArrowRight} from '@mui/icons-material'
 import Lane_assist from '../Assets/lane_assist.mp4'
 import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
+import { Link } from 'react-router-dom'
 import './s90.css'
 
 function S90(){
@@ -34,6 +35,7 @@ function S90(){
                     <br />
 
                     <p id='para_2'><b>Mobility refined</b><br />
+
                     <span id='span_txt'>The XC90 mild hybrid has been engineered to deliver<br />
                     smooth take-offs and refined acceleration, making both<br />
                     city and highway journeys more refined.<br />
@@ -41,6 +43,7 @@ function S90(){
 
                     
                     <p id='para_3'><b>All data included</b><br />
+                    
                     <span id='span_txt'>
                     With all data included, our Digital services package<br />
                     conveniently harmonises you, your S90 and your digital<br />
@@ -61,6 +64,7 @@ function S90(){
             <div className="s90_feat_visual">
                 <div className="visual_feature1">
                     <video src={Lane_assist} autoPlay loop></video>
+
                     <center>
                         <p><b>Corrects drifting</b> <br />
                         If you start drifting across
@@ -69,11 +73,13 @@ function S90(){
                         helping you back to a safer
                         position on the road.
                         </p>
+
                     </center>
                 </div>
 
                 <div className="visual_feature2">
                     <video src={Park_assist} autoPlay loop></video>
+
                     <center>
                         <p><b>360° parking view</b> <br />
                         With four cameras
@@ -83,10 +89,12 @@ function S90(){
                         the side of the car.
                         </p>
                     </center>
+
                 </div>
 
                 <div className="visual_feature3">
                     <video src={Avoid_collision} autoPlay loop></video>
+
                     <center>
                         <p><b>Help crossing traffic</b> <br />
                         Our safety assistance
@@ -95,20 +103,25 @@ function S90(){
                         oncoming traffic.
                         </p>
                     </center>
+
                 </div>
             </div>
             
             <div className="s90_Bookings">
                     <div className="Booking_Section1">
+
                         <p id='book_1'><b>Book now</b> <br />
                         <span id='book_Sect_txt'>Book now to avail exciting offers.
                         Have miles of smiles.</span></p>
-                        <button id='Btn_Book'>Book Now <ArrowRight/></button>
+
+                        <Link to='/book_now'><button id='Btn_Book'>Book Now <ArrowRight/></button></Link>
+
 
                         <p id='book_2'><b>Experience the luxury</b> <br />
                         <span id='book_Sect_txt'>Experience the comfort, luxury and safety features 
                         <br />of Velocity at a dealer near by.</span></p>
-                        <button id='Btn_Test'>Test Drive<ArrowRight/></button>
+
+                        <Link to='/test_drive'><button id='Btn_Test'>Test Drive<ArrowRight/></button></Link>
                     </div>
 
                     <div className="Booking_Section2">

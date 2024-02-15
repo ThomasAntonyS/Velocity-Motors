@@ -35,12 +35,15 @@ export default function TestDrive(){
 
             <div className="TD_sections">
                 <div className="left">
+
                     <p>Test Drive</p>
                     <div className="underline"></div>
                     
                     <form onSubmit={handleTestDrive}>
                         <input type="text" placeholder='Name' onChange={e=>{SetName(e.target.value)}} required/>
+
                         <input type='email' placeholder='Email' onChange={e=>{SetEmail(e.target.value)}} required/>
+                        
                         <input type="text" placeholder='Phone'  onChange={e=>{SetPhone(e.target.value)}} required/>
 
                         <select onChange={e=>{SetModel(e.target.value)}} required>
@@ -51,6 +54,7 @@ export default function TestDrive(){
                         </select>
 
                         <button>Book Now</button>
+
                     </form>
                     
                 </div>
@@ -58,6 +62,7 @@ export default function TestDrive(){
                 <div className="right">
                     <img src={TestDriveImg} alt="" />
                 </div>
+                
             </div>
         </div>
     )

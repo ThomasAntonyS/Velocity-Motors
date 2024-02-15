@@ -9,6 +9,7 @@ import {CurrencyRupee,ArrowRight} from '@mui/icons-material'
 import Lane_assist from '../Assets/lane_assist.mp4'
 import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
+import { Link } from 'react-router-dom'
 import './v60.css'
 
 function v60(){
@@ -17,7 +18,9 @@ function v60(){
             <Header/>
             <div className="v60_Hero">
                 <img src={v60Img} alt="v60Img" />
+
                 <br />
+
                 <center>
                 <p id='xc'><b>Intuitively yours.</b> Advanced technology helps connect your drive to <br />
                     personalised comfort and mobility</p>
@@ -74,6 +77,7 @@ function v60(){
             <div className="v60_feat_visual">
                 <div className="visual_feature1">
                     <video src={Lane_assist} autoPlay loop></video>
+
                     <center>
                         <p><b>Corrects drifting</b> <br />
                         If you start drifting across
@@ -83,10 +87,12 @@ function v60(){
                         position on the road.
                         </p>
                     </center>
+
                 </div>
 
                 <div className="visual_feature2">
                     <video src={Park_assist} autoPlay loop></video>
+
                     <center>
                         <p><b>360° parking view</b> <br />
                         With four cameras
@@ -96,10 +102,12 @@ function v60(){
                         the side of the car.
                         </p>
                     </center>
+
                 </div>
 
                 <div className="visual_feature3">
                     <video src={Avoid_collision} autoPlay loop></video>
+
                     <center>
                         <p><b>Help crossing traffic</b> <br />
                         Our safety assistance
@@ -108,20 +116,26 @@ function v60(){
                         oncoming traffic.
                         </p>
                     </center>
+
                 </div>
             </div>
             
             <div className="v60_Bookings">
                     <div className="Booking_Section1">
                         <p id='book_1'><b>Book now</b> <br />
+
                         <span id='book_Sect_txt'>Book now to avail exciting offers.
                         Have miles of smiles.</span></p>
-                        <button id='Btn_Book'>Book Now <ArrowRight/></button>
+
+                        <Link to='/book_now'><button id='Btn_Book'>Book Now <ArrowRight/></button></Link>
+
 
                         <p id='book_2'><b>Experience the luxury</b> <br />
+
                         <span id='book_Sect_txt'>Experience the comfort, luxury and safety features 
                         <br />of Velocity at a dealer near by.</span></p>
-                        <button id='Btn_Test'>Test Drive<ArrowRight/></button>
+                        
+                        <Link to='/test_drive'><button id='Btn_Test'>Test Drive<ArrowRight/></button></Link>
                     </div>
 
                     <div className="Booking_Section2">

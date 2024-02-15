@@ -29,19 +29,29 @@ function Register(){
     return(
         <div className="register">
             <Link to='/' id='back_to_home'><span>Back to Home</span><ArrowCircleRightSharp/></Link>
+
             <div className="register_content">
+
             <div className="left"></div>
+            
                 <div className="right">
                     <h2>Hello User, <span>Join Us !</span></h2>
                     <p>Lets Sign Up.</p>
          
                     <form onSubmit={handleSubmit}>
+
                         <input type="text" placeholder="Name" onChange={e=>SetUsername(e.target.value)} required />
+
                         <input type="email" placeholder="Email" onChange={e=>SetEmail(e.target.value)} required/>
+
                         <input type="password" placeholder="Password"  id='first_passowrd' required/>
+
                         <input type="password" placeholder="Confirm Password" id='second_passowrd' onChange={e=>SetPassword(e.target.value)} required/>
+
                         <button >Sign Up</button>
+
                         <Link to='/login' id='register_navigation'>Already have an account ?</Link>
+
                     </form>
                  </div>
             </div>

@@ -2,10 +2,14 @@ const express = require('express')
 const cors = require('cors')
 const mysql = require('mysql2')
 const bodyParser = require('body-parser');
+
+
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(cors());
+
+
 
 const db =mysql.createConnection({
     host:'localhost',
@@ -13,6 +17,8 @@ const db =mysql.createConnection({
     password:'',
     database:'velocity_motors'
 })
+
+
 
 app.post('/register',(req,res)=>{
     const sql = "INSERT INTO signIn_signUp (`username`,`email`,`password`) values (?,?,?)"
@@ -27,6 +33,8 @@ app.post('/register',(req,res)=>{
         return true
     })
 })
+
+
 
 app.post('/login',(req,res)=>{
     const sql = "SELECT `username`,`password` FROM signIn_signUp WHERE `email`=? AND `password`=? "
@@ -49,6 +57,8 @@ app.post('/login',(req,res)=>{
     })
 })
 
+
+
 app.post('/test_drive',(req,res)=>{
     const sql = "INSERT INTO test_drive (`name`,`email`,`phone`,`model`) values (?,?,?,?)"
     const testD_values = [
@@ -65,6 +75,8 @@ app.post('/test_drive',(req,res)=>{
         return res.json('Success')
     })
 })
+
+
 
 app.listen(3001,()=>{
     console.log("Backend Connected...")

@@ -7,12 +7,35 @@
         width: 100vw;
         overflow: hidden;
     
-        video{
+        img{
+            position: absolute;
             width: 100%;
             height: 100%;
             object-fit: cover;
+            z-index: -1;
+            background: transparent;
         }
-    }
+        #p1{
+            width: 100%;
+            position: absolute;
+            bottom: 10%;
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.4);
+        }
+        #p2{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            width: 100%;
+            position: absolute;
+            bottom: 4%;
+            color: white;
+            animation: blinking 3s ease-in-out infinite ;
+        }
+        
+    } 
     .Cars_{
         width: 100vw;
         height: 110vh;
@@ -34,11 +57,12 @@
             height: 60vh;
             width: 50vh;
             border-radius: 3px;
+            box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
 
             img{
                 width: 100%;
                 height: 50%;
-                object-fit: cover;
+                object-fit: cover; 
                 object-position: center;
             }
             h2{
@@ -62,6 +86,7 @@
             height: 60vh;
             width: 50vh;
             border-radius: 3px;
+            box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
 
             img{
                 width: 100%;
@@ -90,6 +115,7 @@
             height: 60vh;
             width: 50vh;
             border-radius: 3px;
+            box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.75);
 
             img{
                 width: 100%;
@@ -114,9 +140,16 @@
                 margin-left: 5px;
             }
         }
-        .Card1:hover,.Card2:hover,.Card3:hover{
-            transition: .5s ease;
-            box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.75);
-        }
     }
+}
+@keyframes blinking {
+    0%{
+        opacity: 0;
+    }   
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }        
 }

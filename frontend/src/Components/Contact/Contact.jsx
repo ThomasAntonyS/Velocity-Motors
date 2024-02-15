@@ -1,6 +1,15 @@
+import { Link } from 'react-router-dom'
 import './contact.css'
+import {Twitter,YouTube,Facebook,Instagram, Copyright} from '@mui/icons-material'
 
 export default function Contact(){
+
+    const social=[
+        <Twitter sx={{fontSize:'2.5rem'}} />,
+        <YouTube sx={{fontSize:'2.5rem'}} />,
+        <Facebook sx={{fontSize:'2.5rem'}} />,
+        <Instagram sx={{fontSize:'2.5rem'}} />
+    ]
 
     return(
         <div className="contact_">
@@ -15,7 +24,23 @@ export default function Contact(){
 
             <div className="center"></div>
 
-            <div className="right">
+            <div className="right"> 
+                <p>To get our latest updates</p>
+                <input type="text" placeholder='Email Here !!'/> <button>Subscribe</button>
+
+                <br />
+
+                <p id='Or_txt'>-----------------</p>
+
+                <br />
+
+                {
+                    social.map(social=>
+                        <Link id='Social_links'>{social}</Link>
+                    )
+                }
+
+                <p id='copyright'><Copyright/>Velocity Motors , All rights reserved 2024</p>
 
             </div>
         </div>

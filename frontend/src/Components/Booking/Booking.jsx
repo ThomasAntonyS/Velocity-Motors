@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Header from '../Header/Header'
 import axios from 'axios'
-import './booking.css'
+import '../Booking/booking.css'
 
 export default function Booking(){
 
@@ -23,7 +23,7 @@ export default function Booking(){
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
             if(res.data==='Success')
-            alert("Booking Successful. We'll contact you shortly")
+                alert("Booking Successful. We'll contact you shortly")
         })
         .catch(err => console.log(err))
     }

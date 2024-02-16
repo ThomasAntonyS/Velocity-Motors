@@ -1,4 +1,4 @@
-import './Register.css'
+import '../Register/Register.css'
 import {Link} from 'react-router-dom'
 import {ArrowCircleRightSharp} from '@mui/icons-material'
 import { useState } from 'react'

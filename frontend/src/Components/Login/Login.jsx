@@ -1,4 +1,4 @@
-import './Login.css'
+import '../Login/Login.css'
 import {Link} from 'react-router-dom'
 import {ArrowCircleRightSharp} from '@mui/icons-material'
 import { useState } from 'react'

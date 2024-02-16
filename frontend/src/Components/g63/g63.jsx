@@ -7,7 +7,7 @@ import G63Img1 from '../Assets/g63_img.jpg'
 import G63Img2 from '../Assets/g63_img1.jpg'
 import G63Img3 from '../Assets/g63_img2.jpg'
 import G63Img4 from '../Assets/g63_img3.jpg'
-import './g63.css'
+import '../g63/g63.css'
 
 export default function G63(){
     return(

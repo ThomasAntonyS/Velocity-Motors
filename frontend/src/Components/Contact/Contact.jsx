@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import './contact.css'
+import '../Contact/contact.css'
 import {Twitter,YouTube,Facebook,Instagram, Copyright} from '@mui/icons-material'
 
 export default function Contact(){

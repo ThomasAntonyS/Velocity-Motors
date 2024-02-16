@@ -70,13 +70,13 @@ function v60(){
                     experience.
                     </span></p>
                     
-                    <p id='para_5'>Volvo V60 - Available at <CurrencyRupee/><span id='amount'>1,56,000</span></p>
+                    <p id='para_5'>Volvo V60 - Available at <CurrencyRupee/><span id='amount'>75,00,000</span></p>
                 </div>
             </div>
 
             <div className="v60_feat_visual">
                 <div className="visual_feature1">
-                    <video src={Lane_assist} autoPlay loop></video>
+                    <video src={Lane_assist} autoPlay loop muted></video>
 
                     <center>
                         <p><b>Corrects drifting</b> <br />
@@ -91,7 +91,7 @@ function v60(){
                 </div>
 
                 <div className="visual_feature2">
-                    <video src={Park_assist} autoPlay loop></video>
+                    <video src={Park_assist} autoPlay loop muted></video>
 
                     <center>
                         <p><b>360° parking view</b> <br />
@@ -106,7 +106,7 @@ function v60(){
                 </div>
 
                 <div className="visual_feature3">
-                    <video src={Avoid_collision} autoPlay loop></video>
+                    <video src={Avoid_collision} autoPlay loop muted></video>
 
                     <center>
                         <p><b>Help crossing traffic</b> <br />

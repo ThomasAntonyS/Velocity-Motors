@@ -78,6 +78,32 @@ app.post('/test_drive',(req,res)=>{
 
 
 
+app.post('/book_now',(req,res)=>{
+    const sql = " INSERT INTO book_now (`firstname`,`lastname`,`email`,`phone`,`model`,`street`,`city`,`state`,`pincode`) values (?,?,?,?,?,?,?,?,?)"
+    const bookData = [
+        firstName = req.body[0],
+        lastName = req.body[1],
+        email = req.body[2],
+        phone = req.body[3],
+        model = req.body[4],
+        street = req.body[5],
+        city = req.body[6],
+        state = req.body[7],
+        pincode = req.body[8]
+    ]
+    db.query(sql,(bookData),(err,data)=>{
+        if(err)
+        {
+            console.log(err)
+        }
+        else{
+            return res.json('Success')
+        }
+    })
+
+})
+
+
 app.listen(3001,()=>{
     console.log("Backend Connected...")
 })

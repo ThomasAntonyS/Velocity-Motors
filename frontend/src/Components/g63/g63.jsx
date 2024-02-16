@@ -45,10 +45,10 @@ export default function G63(){
                 <span id='span_txt'>
                 As ever, superior off-road performance defines the G-Class.<br />
                 The G-Class has always led the way in terms of climbing ability,<br />
-                fording depth and side slope angle.
+                fording depth and side slope angle.
                 </span></p>
                 
-                <p id='para_4'>Volvo S90 - Available at <CurrencyRupee/><span id='amount'>1,56,000</span></p>
+                <p id='para_4'>Mercedes AMG G63 - Available at <CurrencyRupee/><span id='amount'>1,2,00,000</span></p>
             </div>
 
             <div className="g63_features_Images">

@@ -16,7 +16,7 @@ function Login(){
         axios.post('http://localhost:3001/login',[email,password])
         .then(res=>{
             if(res.data==='Success')
-            navigate('')
+            navigate('/')
             else
             alert("No registered account...")
         })

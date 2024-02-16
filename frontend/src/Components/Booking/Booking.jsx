@@ -22,8 +22,8 @@ export default function Booking(){
         event.preventDefault()
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
-            if(res.data=='Success')
-            alert("Booking Successful...")
+            if(res.data==='Success')
+            alert("Booking Successful. We'll contact you shortly")
         })
         .catch(err => console.log(err))
     }

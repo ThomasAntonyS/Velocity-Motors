@@ -95,6 +95,7 @@ app.post('/book_now',(req,res)=>{
         if(err)
         {
             console.log(err)
+            alert("Somthing went wrong...")
         }
         else{
             return res.json('Success')

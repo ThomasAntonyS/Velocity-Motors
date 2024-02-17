@@ -97,6 +97,8 @@ app.post('/test_drive',(req,res)=>{
 
 app.post('/book_now',(req,res)=>{
     const sql = " INSERT INTO book_now (`firstname`,`lastname`,`email`,`phone`,`model`,`street`,`city`,`state`,`pincode`) values (?,?,?,?,?,?,?,?,?)"
+
+
     const bookData = [
         firstName = req.body[0],
         lastName = req.body[1],
@@ -108,6 +110,7 @@ app.post('/book_now',(req,res)=>{
         state = req.body[7],
         pincode = req.body[8]
     ]
+
     db.query(sql,(bookData),(err,data)=>{
         if(err)
         {

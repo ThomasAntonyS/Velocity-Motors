@@ -60,19 +60,36 @@ app.post('/login',(req,res)=>{
 
 
 app.post('/test_drive',(req,res)=>{
-    const sql = "INSERT INTO test_drive (`name`,`email`,`phone`,`model`) values (?,?,?,?)"
-    const testD_values = [
-        nameTd = req.body[0],
-        emailTd = req.body[1],
-        phoneTd = req.body[2],
-        modelTd = req.body[3]
-    ]
-    db.query(sql,(testD_values),(err,data)=>{
-        if(err){
-            console.log(err)
-            return res.json("Fail")
+    const checkData = ' SELECT `Name` from test_drive where `Slotdate`=? '
+
+    const date = req.body[4]
+
+    db.query(checkData,(date),(err,data)=>{
+
+        if(err) console.log(err)
+
+        if(data.length>=3){
+            return res.json("Slot unavailable")
         }
-        return res.json('Success')
+        else{
+            const sql = "INSERT INTO test_drive (`name`,`email`,`phone`,`model`,`slotdate`) values (?,?,?,?,?)"
+
+            const testD_values = [
+                nameTd = req.body[0],
+                emailTd = req.body[1],
+                phoneTd = req.body[2],
+                modelTd = req.body[3],
+                slotdate = req.body[4]
+            ]
+
+            db.query(sql,(testD_values),(err,data)=>{
+            if(err){
+                console.log(err)
+                return res.json("Fail")
+            }
+            return res.json('Success')
+            })
+        }
     })
 })
 

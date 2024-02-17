@@ -12,11 +12,12 @@ export default function TestDrive(){
     const [email,SetEmail]=useState('')
     const [phone,SetPhone]=useState('')
     const [model,SetModel]=useState('')
+    const [slot,setSlot]=useState()
     const navigate = useNavigate()
 
     const handleTestDrive=(event)=>{
         
-        axios.post('http://localhost:3001/test_drive',[name,email,phone,model])
+        axios.post('http://localhost:3001/test_drive',[name,email,phone,model,slot])
         .then(res=>{
             if(res.data==='Success')
             {
@@ -51,6 +52,12 @@ export default function TestDrive(){
                             <option value="Volvo XC60">Volvo XC60</option>
                             <option value="Volvo S90">Volvo S90</option>
                             <option value="Mercedes AMG G63">Mercedes AMG G63</option>
+                        </select>
+
+                        <select onClick={e=>{setSlot(e.target.value)}}>
+                            <option value="" disabled selected>Select a slot</option>
+                            <option value="20-04-2024,9AM">20-04-2024,9AM</option>
+                            <option value="20-04-2024,12PM">20-04-2024,12PM</option>
                         </select>
 
                         <button>Book Now</button>

@@ -1,6 +1,5 @@
-import '../Testdrive/testdrive.css'
+import './Styles/testdrive.css'
 import Header from '../Header/Header'
-import {Button} from '@mui/material'
 import TestDriveImg from '../Assets/TestDrive1.jpg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -12,18 +11,23 @@ export default function TestDrive(){
     const [email,SetEmail]=useState('')
     const [phone,SetPhone]=useState('')
     const [model,SetModel]=useState('')
+    const [slot,setSlot]=useState('')
     const navigate = useNavigate()
 
     const handleTestDrive=(event)=>{
         
-        axios.post('http://localhost:3001/test_drive',[name,email,phone,model])
+        axios.post('http://localhost:3001/test_drive',[name,email,phone,model,slot])
         .then(res=>{
+            if(res.data==='Slot unavailable')
+                alert("Slot unavailable...")
             if(res.data==='Success')
             {
-                alert('Test drive booking successsful')
+                alert(" Slot booking Successful")
+                window.location.reload(true)
             }
             else{
                 alert("something went wrong...")
+                window.location.reload(true)
             }
         })
         .catch(Error=>console.log(Error))
@@ -53,6 +57,12 @@ export default function TestDrive(){
                             <option value="Mercedes AMG G63">Mercedes AMG G63</option>
                         </select>
 
+                        <select onChange={e=>{setSlot(e.target.value)}}>
+                            <option value="" selected disabled>Choose a slot</option>
+                            <option value="03-06-2024,9PM">03-06-2024, 9PM</option>
+                            <option value="03-06-2024,10PM">03-06-2024, 10PM</option>
+                        </select>
+
                         <button>Book Now</button>
 
                     </form>
@@ -64,6 +74,7 @@ export default function TestDrive(){
                 </div>
                 
             </div>
+            
         </div>
     )
 }

@@ -1,9 +1,14 @@
-import './Styles/testdrive.css'
+import '../Testdrive/testdrive.css'
 import Header from '../Header/Header'
 import TestDriveImg from '../Assets/TestDrive1.jpg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import AppBar from '@mui/material/AppBar'
+import Toolbar from '@mui/material/Toolbar'
+import IconButton from '@mui/material/IconButton'
+import Typography from '@mui/material/Typography'
+import Menu from '@mui/icons-material/Menu'
 
 export default function TestDrive(){
 
@@ -38,15 +43,21 @@ export default function TestDrive(){
             <Header/>
 
             <div className="TD_sections">
-                <div className="left">
 
-                    <p>Test Drive</p>
-                    <div className="underline"></div>
+                <center>
+                    <p id='TD_heading'>Test Drive</p>
+
+                    <p id='TD_content'>From the smooth acceleration on the open road to the effortless handling through twists and turns, each moment is an invitation to discover the <br />
+                        extraordinary. This is more than a test drive, it's a glimpse into the future of driving pleasure. Come, take the wheel, and let the <br />
+                        road become your canvas for excitement and exploration. Your journey towards automotive excellence starts here.<br />
+                        </p>
                     
                     <form onSubmit={handleTestDrive}>
                         <input type="text" placeholder='Name' onChange={e=>{SetName(e.target.value)}} required/>
 
                         <input type='email' placeholder='Email' onChange={e=>{SetEmail(e.target.value)}} required/>
+
+                        <br />
                         
                         <input type="text" placeholder='Phone'  onChange={e=>{SetPhone(e.target.value)}} required/>
 
@@ -57,24 +68,28 @@ export default function TestDrive(){
                             <option value="Mercedes AMG G63">Mercedes AMG G63</option>
                         </select>
 
+                        <br />
+
                         <select onClick={e=>{setSlot(e.target.value)}}>
                             <option value="" disabled selected>Select a slot</option>
-                            <option value="20-04-2024,9AM">20-04-2024,9AM</option>
+                            <option value="20-04-2024,10AM">20-04-2024,10AM</option>
                             <option value="20-04-2024,12PM">20-04-2024,12PM</option>
+                            <option value="20-04-2024,2PM">20-04-2024,2PM</option>
+                            <option value="20-04-2024,4PM">20-04-2024,4PM</option><option value="20-04-2024,9AM">20-04-2024,9AM</option>
+                            <option value="20-04-2024,6PM">20-04-2024,6PM</option>
                         </select>
+
+                        <br />
 
                         <button>Book Now</button>
 
                     </form>
+                </center>
                     
-                </div>
-
-                <div className="right">
-                    <img src={TestDriveImg} alt="" />
-                </div>
-                
             </div>
-            
+
+                
         </div>
+
     )
 }

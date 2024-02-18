@@ -39,7 +39,7 @@ export default function Booking(){
                     <p id='book_content'>Discover Seamless car booking with us! Choose from a diverse
                                         fleet, including eco-friendly, SUVs, and luxury cars.Our user friendly
                                         platform ensures a hassie-free experience, with transparent pricing and 
-                                        flexible options.Book now and embark your yourney with confidence.</p>
+                                        flexible options.Book now and embark your journey with confidence.</p>
                 </center>
 
 

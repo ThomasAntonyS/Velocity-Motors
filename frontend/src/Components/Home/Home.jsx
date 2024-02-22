@@ -45,7 +45,8 @@ export default function Home (){
                                                 color:'black',
                                                 alignItems:'center',
                                                 marginTop:'10px',
-                                                marginLeft:'5px'}}>
+                                                marginLeft:'5px'}}
+                                                onClick= {() => window.scrollTo(0, 0)}>
                             Know more<ArrowRight/></Link>
                     </div>
 
@@ -61,7 +62,8 @@ export default function Home (){
                                             color:'black',
                                             alignItems:'center',
                                             marginTop:'32px',
-                                            marginLeft:'5px'}}>
+                                            marginLeft:'5px'}}
+                                            onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
                     </div>
 
@@ -78,7 +80,8 @@ export default function Home (){
                                             color:'black',
                                             alignItems:'center',
                                             marginTop:'32px',
-                                            marginLeft:'5px'}}>
+                                            marginLeft:'5px'}}
+                                            onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
 
                     </div>

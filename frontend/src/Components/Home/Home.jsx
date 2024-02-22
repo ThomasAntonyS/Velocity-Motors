@@ -7,6 +7,7 @@ import  '../Home/home.css'
 import { ArrowDownward, ArrowRight } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import Contact from '../Contact/Contact'
+import Accesoriescard from '../Accessories/Accessoriescard'
 
 export default function Home (){
 
@@ -85,6 +86,8 @@ export default function Home (){
             </div>
 
             <Contact/>
+
+            <Accesoriescard/>
             
         </div>
     )

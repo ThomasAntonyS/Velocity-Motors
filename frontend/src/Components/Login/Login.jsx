@@ -18,7 +18,8 @@ function Login(){
             if(res.data==='Success')
             navigate('/')
             else
-            alert("No registered account...")
+            alert("Incorrect Username or password...")
+            window.location.reload(true)
         })
         .catch(err=>console.log(err))
     }

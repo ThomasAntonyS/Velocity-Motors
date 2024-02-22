@@ -16,14 +16,27 @@ export default function Booking(){
     const [state,setState] = useState('')
     const [pincode,setPincode] = useState('')
 
-    const values = [firstName,lastName,email,phone,model,street,city,state,pincode]
+    const generateBookingId = () =>{
+        let result = '';
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let counter = 0;
+        while (counter < 7) {
+            result += characters.charAt(Math.floor(Math.random() * 62));
+            counter += 1;
+        }
+        return ("VM"+result)
+    }
+
 
     const handleBook = (event) =>{
         event.preventDefault()
+        var bookingId = generateBookingId()
+        const values = [firstName,lastName,email,phone,model,street,city,state,pincode,bookingId]
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
             if(res.data==='Success')
                 alert("Booking Successful. We'll contact you shortly")
+                window.location.reload(true)
         })
         .catch(err => console.log(err))
     }

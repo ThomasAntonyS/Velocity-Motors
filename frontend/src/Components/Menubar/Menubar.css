@@ -1,8 +1,27 @@
 #close_btn{
     position: relative;
-    left: 70%;
+    left: 80%;
     display: flex;
     align-items: center;
     background-color: transparent;
     border: transparent;
+    margin: 0px 0px 10px 0px;
+}
+#_menu{
+    margin-top: -5vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1px;
+    margin-left: -5px;
+}
+#menu_items{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 30vh;
+    height: 9vh;
+}
+#menu_items:hover{
+    transition: .5s cubic-bezier(0.77, 0, 0.175, 1);
+    background-color: rgba(0, 0, 0, 0.259);
 }

@@ -96,7 +96,7 @@ app.post('/test_drive',(req,res)=>{
 
 
 app.post('/book_now',(req,res)=>{
-    const sql = " INSERT INTO book_now (`firstname`,`lastname`,`email`,`phone`,`model`,`street`,`city`,`state`,`pincode`) values (?,?,?,?,?,?,?,?,?)"
+    const sql = " INSERT INTO book_now (`firstname`,`lastname`,`email`,`phone`,`model`,`street`,`city`,`state`,`pincode`,`bookingid`) values (?,?,?,?,?,?,?,?,?,?)"
 
 
     const bookData = [
@@ -108,7 +108,8 @@ app.post('/book_now',(req,res)=>{
         street = req.body[5],
         city = req.body[6],
         state = req.body[7],
-        pincode = req.body[8]
+        pincode = req.body[8],
+        bookingId = req.body[9]
     ]
 
     db.query(sql,(bookData),(err,data)=>{

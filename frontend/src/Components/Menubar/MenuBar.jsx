@@ -35,30 +35,33 @@ export default function MenuItems() {
         open={open}
         onClose={handleClose}
         sx={{
-          marginLeft:'-50px',
-          marginTop:'-45px'
+          display:'flex',
+          justifyContent:'center'
         }}
       >
-        <button id='close_btn' onClick={handleClose}><Close/></button>
+            <button id='close_btn' onClick={handleClose}><Close sx={{fontSize:'2rem'}}/></button>
 
-        <MenuItem><Link to='/' style={{color:'black'}}>Home</Link></MenuItem>
+            <MenuItem id='menu_items' ><Link to='/' style={{color:'black'}}>Home</Link></MenuItem>
 
-        <MenuItem><Link to='/' style={{color:'black'}}>Cars</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/' style={{color:'black'}}>Cars</Link></MenuItem>
 
-        <MenuItem><Link to='/login' style={{color:'black'}}>Login</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/login' style={{color:'black'}}>Login</Link></MenuItem>
 
-        <MenuItem><Link to='/register' style={{color:'black'}}>Register</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/register' style={{color:'black'}}>Register</Link></MenuItem>
 
-        <MenuItem><Link to='/test_drive' style={{color:'black'}}>Test Drive</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/test_drive' style={{color:'black'}}>Test Drive</Link></MenuItem>
 
-        <MenuItem><Link to='/book_now' style={{color:'black'}}>Book Now</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/book_now' style={{color:'black'}}>Book Now</Link></MenuItem>
 
-        <MenuItem><Link to='/' style={{color:'black'}}>Contact</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/' style={{color:'black'}}>Contact</Link></MenuItem>
 
-        <MenuItem sx={{
-          alignItems:'center',
-          justifyContent:"space-around"
-        }}><Facebook/> <YouTube/> <Twitter/></MenuItem>
+            <MenuItem sx={{
+            alignItems:'center',
+            justifyContent:"space-around"
+            }}><Facebook sx={{fontSize:'2.5rem',marginTop:'20px'}}/> 
+            <YouTube sx={{fontSize:'2.5rem',marginTop:'20px'}}/> 
+            <Twitter sx={{fontSize:'2.5rem',marginTop:'20px'}}/>
+            </MenuItem>
         
       </Menu>
 

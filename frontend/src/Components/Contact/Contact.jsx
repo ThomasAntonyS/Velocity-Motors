@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import '../Contact/contact.css'
 import {Twitter,YouTube,Facebook,Instagram, Copyright} from '@mui/icons-material'
+import '../Contact/contact.css'
 
 export default function Contact(){
 
@@ -17,13 +17,14 @@ export default function Contact(){
                 <p>Contact Us</p>
                 <div className="underline"></div>
 
-                <input type="text" id='contactName' placeholder='Name'/>
+                    <input type="text" id='contactName' placeholder='Name' />
 
-                <input type="email" id='contactEmail' placeholder='Email'/>
+                    <input type="email" id='contactEmail' placeholder='Email' />
 
-                <textarea cols="20" rows="5" id='contactMessage' placeholder='Message'></textarea>
+                    <textarea cols="20" rows="5" id='contactMessage' placeholder='Message'></textarea>
 
-                <button>Notify Us</button>
+                    <button>Notify Us</button>
+                
                 
             </div>
 

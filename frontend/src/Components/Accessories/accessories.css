@@ -1,0 +1,11 @@
+.accesoriesContent{
+    height: 75vh;
+    width: 100vw;
+}
+.accesoriesCard{
+    display: flex;
+    align-items: center;
+    width: 20vw;
+    height: 50vh;
+    border: 2px solid red;
+}

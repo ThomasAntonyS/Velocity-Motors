@@ -16,12 +16,14 @@ function Register(){
         event.preventDefault();
         try {  
             const status = axios.post('http://localhost:3001/register',[username,email,password])
-            console.log(status)
+
             if(status)
-            navigate('/login')
+                navigate('/login')
             else
-            alert('Registration Unsucessfull')
-        } catch (error) {
+                alert('Registration Unsuccessfull')
+                window.location.reload(true)
+        } 
+        catch (error) {
             console.log(error);
         }
     }

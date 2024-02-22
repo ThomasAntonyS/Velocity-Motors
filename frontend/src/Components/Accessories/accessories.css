@@ -1,11 +1,142 @@
-.accesoriesContent{
-    height: 75vh;
+.accessories{
+    height: 290vh;
     width: 100vw;
-}
-.accesoriesCard{
-    display: flex;
-    align-items: center;
-    width: 20vw;
-    height: 50vh;
-    border: 2px solid red;
+    color: white;
+    background: black;
+
+    #accessories_title{
+        margin-top: 15vh;
+        margin-bottom: 5vh;
+        font-size: 3rem;
+        color: white;
+    }
+    .card{
+        position: relative;
+        width: 25vw;
+        height: 62vh;
+        border: 1px solid white;
+        margin: 20px;
+        border-radius: 5px;
+
+        #card_title{
+            font-size: 1.2rem;
+            margin-top: 5px;
+            border-bottom: .5px solid white;
+            width: max-content;
+        }
+        #card_desc{
+            width: 90%;
+            margin-top: 10px;
+        }
+        img{
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+        #price{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: 9%;
+            margin-left: -10px;
+        }
+        a{
+            position: absolute;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.05rem;
+            padding: 3px;
+            color: white;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            bottom: 2%;
+        }
+        
+    }
+    .card_row1{
+        height: 50%;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 80px 0px;
+    }
+    .card_row2{
+        height: 50%;
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 80px 0px;
+    }
+    #accessories_input{
+        margin-top: 150px;
+        font-size: 2.5rem;
+    }
+    form{
+        margin-top: 70px;
+        width: 80vw;
+        height: 100%;
+    }
+    
+    input{
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: rgb(255, 255, 255);
+        font-size: 1.2rem;
+        margin: 40px 40px;
+        padding: 10px 0px 10px 2px;
+        width: 35%;
+        letter-spacing: .5px;
+        outline: none;
+        letter-spacing: 1px;
+    }
+    input::placeholder{
+        color: rgb(255, 255, 255);
+    }
+    input:focus-visible{
+        transition: .5s ease ;
+        border-top-right-radius: 3px;
+        border-top-left-radius: 3px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        background-color: rgba(255, 255, 255, 0.098);
+    }
+    select{
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+        font-size: 1.2rem;
+        margin: 30px 0px;
+        padding: 10px 0px 5px 0px;
+        width: 35%;
+        outline: none;
+        letter-spacing: 1px;
+    }
+    option{
+        color: black;
+    }
+    button{
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1rem;
+        font-weight: bolder;
+        background-color: white;
+        border: 1px solid white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        margin: 10px 5px 10px 20px;
+    }
+    button:hover{
+        transition: .2s ease;
+        box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.59);
+    }
+
 }

@@ -3,11 +3,10 @@ import HomeHero from '../Assets/Home_hero1.jpg'
 import S_90 from '../Assets/s90_hero.avif'
 import V_60 from '../Assets/v60.avif'
 import G_63 from '../Assets/g63_hero.jpg'
-import  '../Home/home.css'
 import { ArrowDownward, ArrowRight } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
 import Contact from '../Contact/Contact'
-import Accesoriescard from '../Accessories/Accessoriescard'
+import  '../Home/home.css'
 
 export default function Home (){
 
@@ -45,7 +44,7 @@ export default function Home (){
                                                 color:'black',
                                                 alignItems:'center',
                                                 marginTop:'10px',
-                                                marginLeft:'5px'}}
+                                                marginLeft:'10px'}}
                                                 onClick= {() => window.scrollTo(0, 0)}>
                             Know more<ArrowRight/></Link>
                     </div>
@@ -56,13 +55,14 @@ export default function Home (){
                         <h2>Mercedes AMG G63</h2>
 
                         <h4>The G-Class has always led the way in terms of climbing ability, 
-                            fording depth and side slope angle.</h4>
+                            fording depth and side slope angle. The Mercedes <br />
+                            AMG G63</h4>
 
                         <Link to='/amg63' style={{display:'flex',
                                             color:'black',
                                             alignItems:'center',
-                                            marginTop:'32px',
-                                            marginLeft:'5px'}}
+                                            marginTop:'10px',
+                                            marginLeft:'10px'}}
                                             onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
                     </div>
@@ -80,7 +80,7 @@ export default function Home (){
                                             color:'black',
                                             alignItems:'center',
                                             marginTop:'32px',
-                                            marginLeft:'5px'}}
+                                            marginLeft:'10px'}}
                                             onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
 
@@ -89,8 +89,6 @@ export default function Home (){
             </div>
 
             <Contact/>
-
-            <Accesoriescard/>
             
         </div>
     )

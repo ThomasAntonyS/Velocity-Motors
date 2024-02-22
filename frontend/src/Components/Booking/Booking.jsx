@@ -48,7 +48,7 @@ export default function Booking(){
             <div className="booking_Content">
                 
                 <center>
-                    <p id='book_heading'>Book Your Car</p>
+                    <p id='book_heading'>Book Your Car.</p>
                     <p id='book_content'>Discover Seamless car booking with us! Choose from a diverse
                                         fleet, including eco-friendly, SUVs, and luxury cars.Our user friendly
                                         platform ensures a hassie-free experience, with transparent pricing and 

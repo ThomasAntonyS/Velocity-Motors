@@ -60,7 +60,7 @@ app.post('/login',(req,res)=>{
 
 
 app.post('/test_drive',(req,res)=>{
-    const checkData = ' SELECT `Name` from test_drive where `Slotdate`=? '
+    const checkData = ' SELECT `Email` from test_drive where `Slotdate`=? '
 
     const date = req.body[4]
 
@@ -123,6 +123,41 @@ app.post('/book_now',(req,res)=>{
         }
     })
 
+})
+
+
+
+app.post('/accessories',(req,res)=>{
+
+    const checkStock = "SELECT `email` FROM accessories WHERE `item`=? "
+
+    const values=[
+        fname=req.body[0],
+        email=req.body[1],
+        phone=req.body[2],
+        address=req.body[3],
+        item=req.body[4]
+    ]
+
+    const Item=req.body[4]
+
+    db.query(checkStock,(Item),(err,data)=>{
+        if(err) 
+            console.log(err)
+        
+        if(data.length>=2)
+            return res.json("No stock")
+
+        else{
+            const sql = "INSERT INTO accessories(`name`,`email`,`phone`,`address`,`item`) VALUES (?,?,?,?,?)"
+            db.query(sql,(values),(err,data)=>{
+                if(err) console.log(err)
+
+                return res.json("Success")
+            })
+        }
+        
+    })
 })
 
 

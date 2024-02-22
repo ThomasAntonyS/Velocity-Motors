@@ -67,19 +67,19 @@
             }
             h2{
                 margin-top: 15px;
-                margin-left: 5px;
+                margin-left: 10px;
                 display: flex;
             }
             h4{
                 display: flex;
                 width: 95%;
-                margin-left: 5px;
+                margin-left: 10px;
                 margin-top: 5px;
                 color: rgb(47, 47, 47);
             }
             p{ 
                 font-size: 1rem;
-                margin-left: 5px;
+                margin-left: 10px;
             }
         }
         .Card2{
@@ -96,19 +96,19 @@
             }
             h2{
                 margin-top: 15px;
-                margin-left: 5px;
+                margin-left: 10px;
                 display: flex;
             }
             h4{
                 display: flex;
-                margin-left: 5px;
+                margin-left: 10px;
                 width: 95%;
                 margin-top: 5px;
                 color: rgb(47, 47, 47);
             }
             p{ 
                 font-size: 1rem;
-                margin-left: 5px;
+                margin-left: 10px;
             }
         }
         .Card3{
@@ -125,19 +125,19 @@
             }
             h2{
                 margin-top: 15px;
-                margin-left: 5px;
+                margin-left: 10px;
                 display: flex;
             }
             h4{
                 display: flex;
-                margin-left: 5px;
+                margin-left: 10px;
                 width: 95%;
                 margin-top: 5px;
                 color: rgb(47, 47, 47);
             }
             p{ 
                 font-size: 1rem;
-                margin-left: 5px;
+                margin-left: 10px;
             }
         }
     }

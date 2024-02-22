@@ -27,7 +27,8 @@
         #g63{
             background-color: #0e0e0e;
             width: 100%;
-            padding: 20px 0px;
+            margin-top: 10px;
+            padding: 10px 0px 20px 0px;
             margin-bottom: 20px;
         }
     }

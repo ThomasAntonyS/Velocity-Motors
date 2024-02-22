@@ -9,6 +9,7 @@ import Contact from './Components/Contact/Contact';
 import TestDrive from './Components/Testdrive/TestDrive';
 import G63 from './Components/g63/g63';
 import Booking from './Components/Booking/Booking';
+import Accessories from './Components/Accessories/Accessories';
 
 function App() {
   return (
@@ -32,6 +33,8 @@ function App() {
           <Route path='/test_drive' element={<TestDrive/>}/>
 
           <Route path='/book_now' element={<Booking/>}/>
+
+          <Route path='/accessories' element={<Accessories/>} />
           
         </Routes>
       </BrowserRouter>

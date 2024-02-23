@@ -12,6 +12,7 @@ function Accessories(){
     const [address,setAddress] = useState('')
     const [item,setitem] = useState('')
 
+
     const handleAccessories = (event) =>{
         event.preventDefault()
         axios.post('http://localhost:3001/accessories',[name,email,phone,address,item])
@@ -82,7 +83,7 @@ function Accessories(){
                         Handheld Vacuums 6Kpa 16 Ft Cord - 12v, Auto Accessories Kit for 
                         Interior Detailing - Black.
                         </p>
-                        <p id='price'><CurrencyRupeeOutlined/> 749</p>
+                        <p id='price'><CurrencyRupeeOutlined/> 849</p>
                         <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
 
@@ -101,19 +102,26 @@ function Accessories(){
                 <p id='accessories_input'>Select your Accessories.</p>
 
                 <form id='form_input' onSubmit={handleAccessories}>
+
                     <input type="text" placeholder='Full Name' onChange={e=>{setName(e.target.value)}} />
+
                     <input type="email" placeholder='Email' onChange={e=>{setEmail(e.target.value)}} />
+
                     <input type="text" maxLength={10} minLength={10} placeholder='Phone' onChange={e=>{setPhone(e.target.value)}} />
+
                     <input type="text" placeholder='Address' onChange={e=>{setAddress(e.target.value)}} />
+
                     <select onChange={e=>{setitem(e.target.value)}} >
                         <option value="" disabled selected>Choose a Item</option>
-                        <option value="Seat Cover">Seat Cover</option>
-                        <option value="Floor Mat">Floor Mat</option>
-                        <option value="Neck Pillow">Neck Pillow</option>
-                        <option value="Car Vaccum Cleaner">Car Vaccum Cleaner</option>
-                        <option value="Micro Fiber Cloth">Micro Fiber Cloth</option>
+                        <option value="Seat Cover - ₹1749" >Seat Cover - ₹1749</option>
+                        <option value="Floor Mat - ₹299" >Floor Mat - ₹299</option>
+                        <option value="Neck Pillow - ₹1199" >Neck Pillow - ₹1199</option>
+                        <option value="Car Vaccum Cleaner - ₹849" >Car Vaccum Cleaner - ₹849</option>
+                        <option value="Micro Fiber Cloth - ₹499" >Micro Fiber Cloth - ₹499</option>
                     </select>
-                    <button>Submit</button>
+
+                    <button id='access_submit'>Submit</button>
+
                 </form>
 
             </center>

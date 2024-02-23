@@ -43,8 +43,6 @@ export default function MenuItems() {
 
             <MenuItem id='menu_items' ><Link to='/' style={{color:'black'}}>Home</Link></MenuItem>
 
-            <MenuItem id='menu_items'><Link to='/'  style={{color:'black'}}>Cars</Link></MenuItem>
-
             <MenuItem id='menu_items'><Link to='/login' style={{color:'black'}}>Login</Link></MenuItem>
 
             <MenuItem id='menu_items'><Link to='/register' style={{color:'black'}}>Register</Link></MenuItem>
@@ -54,8 +52,6 @@ export default function MenuItems() {
             <MenuItem id='menu_items'><Link to='/book_now' style={{color:'black'}}>Book Now</Link></MenuItem>
 
             <MenuItem id='menu_items'><Link to='/accessories' style={{color:'black'}}>Accessories</Link></MenuItem>
-
-            <MenuItem id='menu_items'><Link to='/' style={{color:'black'}}>Contact</Link></MenuItem>
 
             <MenuItem sx={{
             alignItems:'center',

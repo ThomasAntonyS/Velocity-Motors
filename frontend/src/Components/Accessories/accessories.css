@@ -123,7 +123,7 @@
     option{
         color: black;
     }
-    button{
+    #access_submit{
         color: black;
         font-family: 'Poppins', sans-serif;
         font-size: 1rem;
@@ -134,7 +134,7 @@
         padding: 10px 20px;
         margin: 10px 5px 10px 20px;
     }
-    button:hover{
+    #access_submit:hover{
         transition: .2s ease;
         box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.59);
     }

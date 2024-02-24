@@ -1,14 +1,9 @@
 import '../Testdrive/testdrive.css'
 import Header from '../Header/Header'
-import TestDriveImg from '../Assets/TestDrive1.jpg'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import AppBar from '@mui/material/AppBar'
-import Toolbar from '@mui/material/Toolbar'
-import IconButton from '@mui/material/IconButton'
-import Typography from '@mui/material/Typography'
-import Menu from '@mui/icons-material/Menu'
+
 
 export default function TestDrive(){
 
@@ -23,11 +18,13 @@ export default function TestDrive(){
         
         axios.post('http://localhost:3001/test_drive',[name,email,phone,model,slot])
         .then(res=>{
+
             if(res.data==='Slot unavailable')
                 alert("Slot unavailable...")
+                window.location.reload(true)
+
             if(res.data==='Success')
             {
-                alert(" Slot booking Successful")
                 window.location.reload(true)
             }
             else{

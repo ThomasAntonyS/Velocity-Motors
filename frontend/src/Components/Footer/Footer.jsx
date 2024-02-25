@@ -16,7 +16,7 @@ function Footer(){
                     <Link id='footerLinks' onClick={()=>window.scrollTo(0,0)} to={'/test_drive'}>Test Drive</Link>
                     <Link id='footerLinks' onClick={()=>window.scrollTo(0,0)} to={'/book_now'}>Book Now</Link>
                     <Link id='footerLinks' onClick={()=>window.scrollTo(0,0)} to={'/accessories'}>Accessories</Link>
-                    <Link id='footerLinks' to={'/'} >Contact Us</Link>
+                    <Link id='footerLinks' to={'/'}>Contact Us</Link>
 
                 </div>
 
@@ -28,7 +28,7 @@ function Footer(){
                     <Link id='footerLinks' onClick={()=>window.scrollTo(0,0)} to={'/amg63'}>Mercedes AMG G63</Link>
                     <Link id='footerLinks' onClick={()=>window.scrollTo(0,0)} to={'/s90'}>Volvo S90</Link>
 
-                </div>
+                </div> 
 
                 <p id='copyright'><Copyright sx={{fontSize:'1rem',margin:'0px 5px'}}/>Velocity Motors , All rights reserved 2024</p>
 

@@ -11,6 +11,7 @@ import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
 import { Link } from 'react-router-dom'
 import '../s90/s90.css'
+import Footer from '../Footer/Footer'
 
 function S90(){
     return(
@@ -128,6 +129,8 @@ function S90(){
                         <img src={s90_Booking} alt="s90 Booking" />
                     </div>
             </div>
+
+            <Footer/>
             
         </div>
     )

@@ -1,7 +1,6 @@
 import '../Testdrive/testdrive.css'
 import Header from '../Header/Header'
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
@@ -11,8 +10,7 @@ export default function TestDrive(){
     const [email,SetEmail]=useState('')
     const [phone,SetPhone]=useState('')
     const [model,SetModel]=useState('')
-    const [slot,setSlot]=useState()
-    const navigate = useNavigate()
+    const [slot,setSlot]=useState('')
 
     const handleTestDrive=(event)=>{
         
@@ -25,6 +23,7 @@ export default function TestDrive(){
 
             if(res.data==='Success')
             {
+                alert('Slot booking Successfull')
                 window.location.reload(true)
             }
             else{
@@ -84,7 +83,6 @@ export default function TestDrive(){
                 </center>
                     
             </div>
-
                 
         </div>
 

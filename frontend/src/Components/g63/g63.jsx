@@ -8,6 +8,7 @@ import G63Img2 from '../Assets/g63_img1.jpg'
 import G63Img3 from '../Assets/g63_img2.jpg'
 import G63Img4 from '../Assets/g63_img3.jpg'
 import '../g63/g63.css'
+import Footer from '../Footer/Footer'
 
 export default function G63(){
     return(
@@ -76,6 +77,8 @@ export default function G63(){
                     <img src={G63Book} alt="g63 Booking" />
                 </div>
         </div>
+
+        <Footer/>
         
     </div>
     )

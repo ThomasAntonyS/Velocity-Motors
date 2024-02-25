@@ -11,6 +11,7 @@ import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
 import { Link } from 'react-router-dom'
 import '../v60/v60.css'
+import Footer from '../Footer/Footer'
 
 function v60(){
     return(
@@ -142,6 +143,8 @@ function v60(){
                         <img src={v60_Booking} alt="v60 Booking" />
                     </div>
             </div>
+
+            <Footer/>
             
         </div>
     )

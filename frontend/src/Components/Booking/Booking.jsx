@@ -94,6 +94,7 @@ export default function Booking(){
                     </center>
 
                 </form>
+
             </div>
 
         </div>

@@ -10,14 +10,12 @@ app.use(bodyParser.json())
 app.use(cors());
 
 
-
 const db =mysql.createConnection({
     host:'localhost',
     user:'root',
     password:'',
     database:'velocity_motors'
 })
-
 
 
 app.post('/register',(req,res)=>{

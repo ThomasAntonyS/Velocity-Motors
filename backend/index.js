@@ -29,9 +29,8 @@ app.post('/register',(req,res)=>{
 
         if(err) console.log(err)
 
-        if(data){
-            alert("Email Already exist...")
-            window.location.reload(true)
+        if(data.length>=1){
+            return res.json("Email Already exist")
         }
 
         else{
@@ -43,9 +42,9 @@ app.post('/register',(req,res)=>{
                 password=req.body[2]
             ]
             db.query(sql,(values),(err,data)=>{
-                console.log(data);
-                if(err) return false
-                return true
+                if(err) console.log(err)
+                
+                return res.json("Success")
             })
         }
     })

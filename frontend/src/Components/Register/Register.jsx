@@ -17,17 +17,25 @@ function Register(){
         event.preventDefault();
         if(password.match(cnfpassword)){
             try {  
-                const status = axios.post('http://localhost:3001/register',[username,email,password])
-    
-                if(status)
-                    navigate('/login')
-                else
-                    alert('Registration Unsuccessfull')
-                    window.location.reload(true)
+                axios.post('http://localhost:3001/register',[username,email,password])
+                .then(res=>{
+                    if(res.data==="Success")
+                        navigate('/login')
+
+                    else if(res.data==="Email Already exist"){
+                        alert('Email already exist...')
+                        window.location.reload(true)
+                    }
+                    else{
+                        alert('Registration Unsuccessfull')
+                        window.location.reload(true)
+                    }
+                })
             } 
             catch (error) {
                 console.log(error);
             }
+                   
         }
         else{
             alert("Password Doesn't match")

@@ -11,21 +11,29 @@ function Register(){
     const [username,SetUsername] = useState('')
     const [email,SetEmail] = useState('')
     const [password,SetPassword] = useState('')
+    const [cnfpassword,SetCnfPassword] = useState('')
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        try {  
-            const status = axios.post('http://localhost:3001/register',[username,email,password])
-
-            if(status)
-                navigate('/login')
-            else
-                alert('Registration Unsuccessfull')
-                window.location.reload(true)
-        } 
-        catch (error) {
-            console.log(error);
+        if(password.match(cnfpassword)){
+            try {  
+                const status = axios.post('http://localhost:3001/register',[username,email,password])
+    
+                if(status)
+                    navigate('/login')
+                else
+                    alert('Registration Unsuccessfull')
+                    window.location.reload(true)
+            } 
+            catch (error) {
+                console.log(error);
+            }
         }
+        else{
+            alert("Password Doesn't match")
+            window.location.reload(true)
+        }
+        
     }
 
     return(
@@ -46,9 +54,9 @@ function Register(){
 
                         <input type="email" placeholder="Email" onChange={e=>SetEmail(e.target.value)} required/>
 
-                        <input type="password" placeholder="Password"  id='first_passowrd' required/>
+                        <input type="password" placeholder="Password" onChange={e=>SetPassword(e.target.value)} required/>
 
-                        <input type="password" placeholder="Confirm Password" id='second_passowrd' onChange={e=>SetPassword(e.target.value)} required/>
+                        <input type="password" placeholder="Confirm Password" onChange={e=>SetCnfPassword(e.target.value)} required/>
 
                         <button >Sign Up</button>
 

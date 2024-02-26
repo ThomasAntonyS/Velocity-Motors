@@ -21,17 +21,35 @@ const db =mysql.createConnection({
 
 
 app.post('/register',(req,res)=>{
-    const sql = "INSERT INTO signIn_signUp (`username`,`email`,`password`) values (?,?,?)"
-    const values =[
-        username=req.body[0],
-        email=req.body[1],
-        password=req.body[2]
-    ]
-    db.query(sql,(values),(err,data)=>{
-        console.log(data);
-        if(err) return false
-        return true
+
+    const checkData = ' SELECT `Email` from signIn_signUp where `Email`=? '
+    const checkEmail=req.body[1]
+
+    db.query(checkData,(checkEmail),(err,data)=>{
+
+        if(err) console.log(err)
+
+        if(data){
+            alert("Email Already exist...")
+            window.location.reload(true)
+        }
+
+        else{
+            const sql = "INSERT INTO signIn_signUp (`username`,`email`,`password`) values (?,?,?)"
+
+            const values =[
+                username=req.body[0],
+                email=req.body[1],
+                password=req.body[2]
+            ]
+            db.query(sql,(values),(err,data)=>{
+                console.log(data);
+                if(err) return false
+                return true
+            })
+        }
     })
+    
 })
 
 

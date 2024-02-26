@@ -61,13 +61,13 @@ export default function Booking(){
                     <center>
                         <input type="text" placeholder='First Name' id='Fn' onChange={e=>{setFirstName(e.target.value)}} required/>
                         <input type="text" placeholder='Last Name' id='Ln' required onChange={e=>{setLastName(e.target.value)}}/>
-                        <input type="email" placeholder='Email Id' id='Email' required onChange={e=>{setEmail(e.target.value)}}/>
+                        <input type="email" placeholder='Email Id' minLength={13} id='Email' required onChange={e=>{setEmail(e.target.value)}}/>
                     
 
                     <br />
 
                     
-                        <input type="text" placeholder='Phone Number' id='Ph' required onChange={e=>{setPhone(e.target.value)}}/>
+                        <input type="text" placeholder='Phone Number' minLength={10} maxLength={10} id='Ph' required onChange={e=>{setPhone(e.target.value)}}/>
 
                         <select id='Se' onChange={e=>{setModel(e.target.value)}} required>
                             <option value="" selected disabled>Choose a model</option>
@@ -84,7 +84,7 @@ export default function Booking(){
                     
                         <input type="text" placeholder='City' id='Ct' required onChange={e=>{setCity(e.target.value)}}/>
                         <input type="text" placeholder='State' id='Sa' required onChange={e=>{setState(e.target.value)}}/>
-                        <input type="text" placeholder='Pincode' id='Pc' required onChange={e=>{setPincode(e.target.value)}}/>
+                        <input type="text" placeholder='Pincode' minLength={6} maxLength={7} id='Pc' required onChange={e=>{setPincode(e.target.value)}}/>
                     
 
                     <br />

@@ -55,7 +55,7 @@ export default function TestDrive(){
 
                         <br />
                         
-                        <input type="text" placeholder='Phone'  onChange={e=>{SetPhone(e.target.value)}} required/>
+                        <input type="text" placeholder='Phone' minLength={10} maxLength={10} onChange={e=>{SetPhone(e.target.value)}} required/>
 
                         <select onChange={e=>{SetModel(e.target.value)}} required>
                             <option selected disabled>Select a model</option>

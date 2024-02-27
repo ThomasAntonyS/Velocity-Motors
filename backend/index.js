@@ -152,7 +152,8 @@ app.post('/accessories',(req,res)=>{
         email=req.body[1],
         phone=req.body[2],
         address=req.body[3],
-        item=req.body[4]
+        item=req.body[4],
+        price=req.body[5]
     ]
 
     const Item=req.body[4]
@@ -165,7 +166,7 @@ app.post('/accessories',(req,res)=>{
             return res.json("No stock")
 
         else{
-            const sql = "INSERT INTO accessories(`name`,`email`,`phone`,`address`,`item`) VALUES (?,?,?,?,?)"
+            const sql = "INSERT INTO accessories(`name`,`email`,`phone`,`address`,`item`,`price`) VALUES (?,?,?,?,?,?)"
             db.query(sql,(values),(err,data)=>{
                 if(err) console.log(err)
 

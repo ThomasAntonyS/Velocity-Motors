@@ -120,7 +120,7 @@
         font-size: 1.2rem;
         margin: 30px 0px;
         padding: 10px 0px 5px 0px;
-        width: 35%;
+        width: 30%;
         outline: none;
         letter-spacing: 1px;
     }
@@ -141,6 +141,13 @@
     #access_submit:hover{
         transition: .2s ease;
         box-shadow: 0px 0px 6px 1px rgba(255, 255, 255, 0.59);
+    }
+    #price{
+        width: max-content;
+        font-size: 1.2rem;
+        margin: 10px 0px;
+        border-bottom: 1px solid rgba(119, 119, 119, 0.249);
+
     }
 
 }

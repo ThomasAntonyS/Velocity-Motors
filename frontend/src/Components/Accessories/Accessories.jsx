@@ -11,11 +11,39 @@ function Accessories(){
     const [phone,setPhone] = useState('')
     const [address,setAddress] = useState('')
     const [item,setitem] = useState('')
+    const [price,setPrice] = useState('0')
+
+
+    const handleItem = (selectedItem) =>{
+        console.log(selectedItem)
+        setitem(selectedItem)
+
+        switch (selectedItem){
+
+            case 'Seat Cover' : setPrice('1749')
+                                break;
+
+            case 'Floor Mat' : setPrice('299')
+                                break;
+
+            case 'Neck Pillow' : setPrice('1199')
+                                break;
+
+            case 'Car Vaccum Cleaner' : setPrice('849')
+                                break;
+
+            case 'Micro Fiber Cloth' : setPrice('499')
+                                break;
+
+            default : setPrice('0')
+            break;
+        }
+    }
 
 
     const handleAccessories = (event) =>{
         event.preventDefault()
-        axios.post('http://localhost:3001/accessories',[name,email,phone,address,item])
+        axios.post('http://localhost:3001/accessories',[name,email,phone,address,item,price])
         .then(res=>{
             if(res.data==='Success'){
                 alert("Order Placed...")
@@ -111,19 +139,21 @@ function Accessories(){
 
                     <input type="text" placeholder='Address' onChange={e=>{setAddress(e.target.value)}} />
 
-                    <select onChange={e=>{setitem(e.target.value)}} >
+                    <select onChange={e=>handleItem(e.target.value)} >
                         <option value="" disabled selected>Choose a Item</option>
-                        <option value="Seat Cover - ₹1749" >Seat Cover - ₹1749</option>
-                        <option value="Floor Mat - ₹299" >Floor Mat - ₹299</option>
-                        <option value="Neck Pillow - ₹1199" >Neck Pillow - ₹1199</option>
-                        <option value="Car Vaccum Cleaner - ₹849" >Car Vaccum Cleaner - ₹849</option>
-                        <option value="Micro Fiber Cloth - ₹499" >Micro Fiber Cloth - ₹499</option>
+                        <option value="Seat Cover" >Seat Cover</option>
+                        <option value="Floor Mat" >Floor Mat</option>
+                        <option value="Neck Pillow" >Neck Pillow</option>
+                        <option value="Car Vaccum Cleaner" >Car Vaccum Cleaner</option>
+                        <option value="Micro Fiber Cloth" >Micro Fiber Cloth</option>
                     </select>
+
+                    <p id='price'>Total Price: ₹ {price}</p>
 
                     <button id='access_submit'>Submit</button>
 
                 </form>
-
+                
             </center>
             
         </div>

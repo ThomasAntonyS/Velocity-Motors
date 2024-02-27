@@ -83,7 +83,8 @@ app.post('/test_drive',(req,res)=>{
 
         if(err) console.log(err)
 
-        if(data.length>=3){
+        if(data.length>=2){
+            console.log(data.length)
             return res.json("Slot unavailable")
         }
         else{
@@ -172,6 +173,18 @@ app.post('/accessories',(req,res)=>{
             })
         }
         
+    })
+})
+
+
+app.post('/get_data',(req,res)=>{
+    const getUser = "SELECT * FROM accessories WHERE `email`=? "
+    const G_Email = req.body[0]
+
+    db.query(getUser,(G_Email),(err,data)=>{
+        if(err) console.log(err)
+
+        return res.json(data[0])
     })
 })
 

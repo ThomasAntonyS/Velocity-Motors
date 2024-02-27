@@ -31,7 +31,7 @@ export default function Home (){
 
                 <div className="Car_cards">
 
-                    <div className="Card1">
+                    <div className="Card">
                         <img src={V_60} alt="" />
 
                         <h2>VOLVO XC60</h2>
@@ -49,7 +49,7 @@ export default function Home (){
                             Know more<ArrowRight/></Link>
                     </div>
 
-                    <div className="Card2">
+                    <div className="Card">
                         <img src={G_63} alt="" />
 
                         <h2>Mercedes AMG G63</h2>
@@ -67,7 +67,7 @@ export default function Home (){
                         Know more<ArrowRight/></Link>
                     </div>
 
-                    <div className="Card3">
+                    <div className="Card">
                         <img src={S_90} alt="" />
 
                         <h2>VOLVO S90</h2>

@@ -59,6 +59,10 @@
         }
         
     }
+    .card:hover{
+        transition: .2s ease;
+        transform: translateY(-10px);
+    }
     .card_row1{
         height: 50%;
         width: 90%;

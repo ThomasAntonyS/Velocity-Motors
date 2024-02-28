@@ -11,7 +11,7 @@ function Accessories(){
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     const [phone,setPhone] = useState('')
-    const [address,setAddress] = useState('')
+    const [address,setAddress] = useState('') 
     const [item,setitem] = useState('')
     const [price,setPrice] = useState('0') 
     const [popup,setPopup] = useState('')
@@ -75,7 +75,7 @@ function Accessories(){
                         Resistant Seat Cover Protector for your car.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 1749</p>
-                        <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
+                        <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
 
                     <div className="card">
@@ -86,7 +86,7 @@ function Accessories(){
                         guaranteed comfort for 2 years.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 299</p>
-                        <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
+                        <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
 
                     <div className="card">
@@ -97,7 +97,7 @@ function Accessories(){
                         with Washable Velvet Cover, Black.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 849</p>
-                        <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
+                        <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
                 </div>
 
@@ -110,7 +110,7 @@ function Accessories(){
                         Interior Detailing - Black.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 849</p>
-                        <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
+                        <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
 
                     <div className="card">
@@ -121,7 +121,7 @@ function Accessories(){
                         Towel Lint-Free, 40cm x 40cm, Pack of 1.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 499</p>
-                        <a href='#form_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
+                        <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
                     </div>
                 </div>
 

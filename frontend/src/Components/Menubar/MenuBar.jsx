@@ -51,13 +51,13 @@ export default function MenuItems() {
 
             <MenuItem id='menu_items'><Link to='/book_now' style={{color:'black',width:'100%',textAlign:'center'}}>Book Now</Link></MenuItem>
 
-            <MenuItem id='menu_items'><Link to='/accessories' style={{color:'black',width:'100%',textAlign:'center'}}>Accessories</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/accessories' style={{color:'black'}}>Accessories</Link></MenuItem>
 
             <MenuItem id='menu_items_model'>Models</MenuItem>
 
             <MenuItem id='menu_items'><Link to={'/xc60'} style={{color:'black',width:'100%',textAlign:'center'}}>Volvo XC60</Link></MenuItem>
 
-            <MenuItem id='menu_items'><Link to={'/amg63'} style={{color:'black',width:'100%',textAlign:'center'}}>Mercedes AMG G63</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to={'/amg63'} style={{color:'black',width:'100%',textAlign:'center'}}>Mercedes G63</Link></MenuItem>
 
             <MenuItem id='menu_items'><Link to={'/s90'} style={{color:'black',width:'100%',textAlign:'center'}}>Volvo S90</Link></MenuItem>
 
@@ -67,9 +67,9 @@ export default function MenuItems() {
               alignItems:'center',
               justifyContent:"space-around"
               }}>
-              <Facebook sx={{fontSize:'2.5rem',margin:'0px 10px',color:'black'}}/> 
-              <YouTube sx={{fontSize:'2.5rem',margin:'0px 10px',color:'black'}}/> 
-              <Twitter sx={{fontSize:'2.5rem',margin:'0px 10px',color:'black'}}/>
+              <Facebook className='social_icon' sx={{fontSize:'2rem',margin:'0px 10px',color:'black'}}/> 
+              <YouTube className='social_icon' sx={{fontSize:'2rem',margin:'0px 10px',color:'black'}}/> 
+              <Twitter className='social_icon' sx={{fontSize:'2rem',margin:'0px 10px',color:'black'}}/>
             </MenuItem>
         
       </Menu>

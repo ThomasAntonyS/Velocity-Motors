@@ -5,10 +5,10 @@ import '../Contact/contact.css'
 export default function Contact(){
 
     const social=[
-        <Twitter sx={{fontSize:'2.5rem'}} />,
-        <YouTube sx={{fontSize:'2.5rem'}} />,
-        <Facebook sx={{fontSize:'2.5rem'}} />,
-        <Instagram sx={{fontSize:'2.5rem'}} />
+        <Twitter sx={{fontSize:'2rem'}} />,
+        <YouTube sx={{fontSize:'2rem'}} />,
+        <Facebook sx={{fontSize:'2rem'}} />,
+        <Instagram sx={{fontSize:'2rem'}} />
     ]
 
     return(
@@ -46,7 +46,7 @@ export default function Contact(){
                     )
                 }
 
-                <p id='copyright'><Copyright/>Velocity Motors , All rights reserved 2024</p>
+                <p id='copyright'><Copyright sx={{fontSize:".8rem"}}/>Velocity Motors , All rights reserved 2024</p>
 
             </div>
         </div>

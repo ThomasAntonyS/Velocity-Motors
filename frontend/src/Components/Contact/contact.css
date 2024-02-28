@@ -34,7 +34,7 @@
         }
         #contactName{
             grid-column-start: 1;
-            grid-column-end: 7;
+            grid-column-end: 8;
             grid-row-start: 2;
             grid-row-end: 3;
             width: 100%;
@@ -43,7 +43,7 @@
         }
         #contactEmail{
             grid-column-start: 1;
-            grid-column-end: 7;
+            grid-column-end: 8;
             grid-row-start: 3;
             grid-row-end: 4;
             width: 100%;
@@ -52,7 +52,7 @@
         }
         #contactMessage{
             grid-column-start: 1;
-            grid-column-end: 7;
+            grid-column-end: 8;
             grid-row-start: 4;
             grid-row-end: 6;
             width: 100%;
@@ -106,7 +106,7 @@
         }
         button{
             grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column-end: 5;
             grid-row-start: 5;
             grid-row-end: 6;
             width: 60%;
@@ -189,6 +189,68 @@
             align-items: center;
             font-size: 1.3rem;
             margin-top: 15px;
+        }
+    }
+}
+
+@media (max-width:450px) {
+    .contact_{
+        display: block;
+        width: 100vw;
+        height: max-content;
+
+        .left{
+            gap: 15px;
+            width: 90%;
+            margin: 20px auto;
+
+            p{
+                font-size: 2rem;
+                margin-bottom: 20px;
+                height: max-content;
+            }
+            input{
+                width: 100%;
+                font-size: 1rem;
+                margin: 20px 0px;
+            }
+            textarea{
+                font-size: 1rem;
+            }
+            .underline{
+                width: 100%;
+            }
+        }
+        .center{
+            margin: auto;
+            width: 90%;
+            height: 2px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .right{
+            width: 100%;
+
+            p{
+                font-size: 1.5rem;
+            }
+            #Or_txt{
+                font-size: 1rem;
+            }
+            input{
+                font-size: 1rem;
+            }
+            button{
+                font-size: .8rem;
+                margin-left: -5px;
+            }
+            #Social_links{
+               margin-top: 0px;
+            }
+            #copyright{
+
+                font-size: .8rem;
+            }
         }
     }
 }

@@ -40,11 +40,12 @@ export default function Home (){
                             its combination of safety features, comfort, and
                             Scandinavian design aesthetics.</h4>
 
-                        <Link to='/xc60' style={{display:'flex',
+                        <Link to='/xc60' id='car_pg_link' style={{display:'flex',
                                                 color:'black',
                                                 alignItems:'center',
                                                 marginTop:'10px',
-                                                marginLeft:'10px'}}
+                                                marginLeft:'10px',
+                                                width:'max-content'}}
                                                 onClick= {() => window.scrollTo(0, 0)}>
                             Know more<ArrowRight/></Link>
                     </div>
@@ -55,14 +56,15 @@ export default function Home (){
                         <h2>Mercedes AMG G63</h2>
 
                         <h4>The G-Class has always led the way in terms of climbing ability, 
-                            fording depth and side slope angle. The Mercedes <br />
-                            AMG G63</h4>
+                            fording depth and side slope angle. The Mercedes AMG<br />
+                            G63</h4>
 
-                        <Link to='/amg63' style={{display:'flex',
+                        <Link to='/amg63' id='car_pg_link' style={{display:'flex',
                                             color:'black',
                                             alignItems:'center',
                                             marginTop:'10px',
-                                            marginLeft:'10px'}}
+                                            marginLeft:'10px',
+                                            width:'max-content'}}
                                             onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
                     </div>
@@ -76,15 +78,18 @@ export default function Home (){
                             luxury sedan with
                             Google built-in.</h4>
 
-                        <Link to='/s90' style={{display:'flex',
+                        <Link to='/s90'id='car_pg_link' style={{display:'flex',
                                             color:'black',
                                             alignItems:'center',
                                             marginTop:'32px',
-                                            marginLeft:'10px'}}
+                                            marginLeft:'10px',
+                                            width:'max-content'}}
                                             onClick= {() => window.scrollTo(0, 0)}>
                         Know more<ArrowRight/></Link>
 
                     </div>
+
+
                 </div>
             </div>
 

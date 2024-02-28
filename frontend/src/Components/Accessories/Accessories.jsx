@@ -131,15 +131,15 @@ function Accessories(){
 
                 <form id='form_input' onSubmit={handleAccessories}>
 
-                    <input type="text" placeholder='Full Name' onChange={e=>{setName(e.target.value)}} />
+                    <input type="text" placeholder='Full Name' onChange={e=>{setName(e.target.value)}} required/>
 
-                    <input type="email" placeholder='Email' onChange={e=>{setEmail(e.target.value)}} />
+                    <input type="email" placeholder='Email' onChange={e=>{setEmail(e.target.value)}} required/>
 
-                    <input type="text" maxLength={10} minLength={10} placeholder='Phone' onChange={e=>{setPhone(e.target.value)}} />
+                    <input type="text" maxLength={10} minLength={10} placeholder='Phone' onChange={e=>{setPhone(e.target.value)}} required/>
 
-                    <input type="text" placeholder='Address' onChange={e=>{setAddress(e.target.value)}} />
+                    <input type="text" placeholder='Address' onChange={e=>{setAddress(e.target.value)}} required/>
 
-                    <select onChange={e=>handleItem(e.target.value)} >
+                    <select onChange={e=>handleItem(e.target.value)} required>
                         <option value="" disabled selected>Choose a Item</option>
                         <option value="Seat Cover" >Seat Cover</option>
                         <option value="Floor Mat" >Floor Mat</option>

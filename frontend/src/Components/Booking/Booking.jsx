@@ -2,11 +2,12 @@ import { useState } from 'react'
 import Header from '../Header/Header'
 import axios from 'axios'
 import '../Booking/booking.css'
+import Popup from '../Popup/Popup'
 
 export default function Booking(){
 
 
-    const [firstName,setFirstName] = useState('')
+    const [firstName,setFirstName] = useState('') 
     const [lastName,setLastName] = useState('')
     const [email,setEmail] = useState('')
     const [phone,setPhone] = useState('')
@@ -15,6 +16,7 @@ export default function Booking(){
     const [city,setCity] = useState('')
     const [state,setState] = useState('')
     const [pincode,setPincode] = useState('')
+    const [popup,setPopup] = useState('')
 
     const generateBookingId = () =>{
         let result = '';
@@ -24,7 +26,7 @@ export default function Booking(){
             result += characters.charAt(Math.floor(Math.random() * 62));
             counter += 1;
         }
-        return ("VM"+result)
+        return ("VM_"+result)
     }
 
 
@@ -35,8 +37,7 @@ export default function Booking(){
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
             if(res.data==='Success')
-                alert("Booking Successful. We'll contact you shortly")
-                window.location.reload(true)
+                setPopup("Booking Successful. We'll contact you shortly")
         })
         .catch(err => console.log(err))
     }
@@ -44,6 +45,8 @@ export default function Booking(){
     return(
         <div className="booking_">
             <Header/>
+
+            <Popup message={popup} status={ (popup.message=="Booking Successful. We'll contact you shortly") ? 'Success' : 'Fail' } />
 
             <div className="booking_Content">
                 

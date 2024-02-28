@@ -84,8 +84,7 @@ app.post('/test_drive',(req,res)=>{
         if(err) console.log(err)
 
         if(data.length>=2){
-            console.log(data.length)
-            return res.json("Slot unavailable")
+            return res.json('Slot unavailable')
         }
         else{
             const sql = "INSERT INTO test_drive (`name`,`email`,`phone`,`model`,`slotdate`) values (?,?,?,?,?)"

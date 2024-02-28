@@ -1,5 +1,5 @@
 .accessories{
-    height: 290vh;
+    height: max-content;
     width: 100vw;
     color: white;
     background: black;
@@ -83,7 +83,8 @@
         font-size: 2.5rem;
     }
     form{
-        margin-top: 70px;
+        position: relative;
+        margin: 70px 0px;
         width: 80vw;
         height: 100%;
     }
@@ -136,7 +137,7 @@
         border: 1px solid white;
         border-radius: 20px;
         padding: 10px 20px;
-        margin: 10px 5px 10px 20px;
+        margin: 25px 5px 0px 20px;
     }
     #access_submit:hover{
         transition: .2s ease;

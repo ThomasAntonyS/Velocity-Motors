@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import Header from '../Header/Header'
-import './accessories.css'
 import { ArrowDownward, CurrencyRupeeOutlined } from '@mui/icons-material'
+import Popup from '../Popup/Popup'
+import Footer from '../../Components/Footer/Footer'
 import axios from 'axios'
+import './accessories.css'
 
 function Accessories(){
 
@@ -11,11 +13,11 @@ function Accessories(){
     const [phone,setPhone] = useState('')
     const [address,setAddress] = useState('')
     const [item,setitem] = useState('')
-    const [price,setPrice] = useState('0')
+    const [price,setPrice] = useState('0') 
+    const [popup,setPopup] = useState('')
 
 
     const handleItem = (selectedItem) =>{
-        console.log(selectedItem)
         setitem(selectedItem)
 
         switch (selectedItem){
@@ -45,17 +47,13 @@ function Accessories(){
         event.preventDefault()
         axios.post('http://localhost:3001/accessories',[name,email,phone,address,item,price])
         .then(res=>{
+
             if(res.data==='Success'){
-                alert("Order Placed...")
-                window.location.reload(true)
+                setPopup("Order Placed...")     
             }
-            else if(res.data==='No stock'){
-                alert("Item out of Stock...")
-                window.location.reload(true)
-            }
-            else{
-                alert("Something went wrong...")
-                window.location.reload(true)
+
+            if(res.data==='No stock'){
+                setPopup("Item out of Stock...") 
             }
         })
     }
@@ -131,6 +129,8 @@ function Accessories(){
 
                 <form id='form_input' onSubmit={handleAccessories}>
 
+                    <Popup message={popup} status={(popup=='Order Placed...') ? 'Success' : 'Fail'} />
+
                     <input type="text" placeholder='Full Name' onChange={e=>{setName(e.target.value)}} required/>
 
                     <input type="email" placeholder='Email' onChange={e=>{setEmail(e.target.value)}} required/>
@@ -153,6 +153,8 @@ function Accessories(){
                     <button id='access_submit'>Submit</button>
 
                 </form>
+
+                <Footer/>
                 
             </center>
             

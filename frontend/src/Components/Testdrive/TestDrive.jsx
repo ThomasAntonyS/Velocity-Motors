@@ -2,33 +2,30 @@ import '../Testdrive/testdrive.css'
 import Header from '../Header/Header'
 import { useState } from 'react'
 import axios from 'axios'
+import Popup from '../Popup/Popup'
 
 
 export default function TestDrive(){
 
-    const [name,SetName]=useState('')
-    const [email,SetEmail]=useState('')
-    const [phone,SetPhone]=useState('')
-    const [model,SetModel]=useState('')
-    const [slot,setSlot]=useState('')
+    const [name,SetName] = useState('')
+    const [email,SetEmail] = useState('') 
+    const [phone,SetPhone] = useState('')
+    const [model,SetModel] = useState('')
+    const [slot,setSlot] = useState('')
+    const [popup,setPopup] = useState('')
 
     const handleTestDrive=(event)=>{
-        
+        event.preventDefault()
         axios.post('http://localhost:3001/test_drive',[name,email,phone,model,slot])
         .then(res=>{
 
             if(res.data==='Slot unavailable')
-                alert("Slot unavailable...")
-                window.location.reload(true)
-
+            {
+                setPopup("Slot unavailable...")
+            }
             if(res.data==='Success')
             {
-                alert('Slot booking Successfull')
-                window.location.reload(true)
-            }
-            else{
-                alert("something went wrong...")
-                window.location.reload(true)
+                setPopup("Slot booking Successfull")
             }
         })
         .catch(Error=>console.log(Error))
@@ -37,6 +34,8 @@ export default function TestDrive(){
     return(
         <div className="Test_Drive">
             <Header/>
+
+            <Popup message={popup} status={ (popup=='Slot booking Successfull') ? 'Success' : 'Fail' } />
 
             <div className="TD_sections">
 
@@ -71,7 +70,7 @@ export default function TestDrive(){
                             <option value="20-04-2024,10AM">20-04-2024,10AM</option>
                             <option value="20-04-2024,12PM">20-04-2024,12PM</option>
                             <option value="20-04-2024,2PM">20-04-2024,2PM</option>
-                            <option value="20-04-2024,4PM">20-04-2024,4PM</option><option value="20-04-2024,9AM">20-04-2024,9AM</option>
+                            <option value="20-04-2024,4PM">20-04-2024,4PM</option>
                             <option value="20-04-2024,6PM">20-04-2024,6PM</option>
                         </select>
 

@@ -13,7 +13,7 @@ function Accessories(){
     const [phone,setPhone] = useState('')
     const [address,setAddress] = useState('') 
     const [item,setitem] = useState('')
-    const [price,setPrice] = useState('0') 
+    const [price,setPrice] = useState('0')
     const [popup,setPopup] = useState('')
 
 

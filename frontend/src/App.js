@@ -10,6 +10,7 @@ import TestDrive from './Components/Testdrive/TestDrive';
 import G63 from './Components/g63/g63';
 import Booking from './Components/Booking/Booking';
 import Accessories from './Components/Accessories/Accessories';
+import Feedback from './Components/Feedback/Feedback';
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
           <Route path='/book_now' element={<Booking/>}/>
 
           <Route path='/accessories' element={<Accessories/>} />
+
+          <Route path='/feedback' element={<Feedback/>} />
           
         </Routes>
       </BrowserRouter>

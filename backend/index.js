@@ -168,8 +168,9 @@ app.post('/accessories',(req,res)=>{
             const sql = "INSERT INTO accessories(`name`,`email`,`phone`,`address`,`item`,`price`) VALUES (?,?,?,?,?,?)"
             db.query(sql,(values),(err,data)=>{
                 if(err) console.log(err)
-
-                return res.json("Success")
+                else{
+                    return res.json("Success")
+                }
             })
         }
         
@@ -177,15 +178,22 @@ app.post('/accessories',(req,res)=>{
 })
 
 
-app.post('/get_data',(req,res)=>{
-    const getUser = "SELECT * FROM accessories WHERE `email`=? "
-    const G_Email = req.body[0]
+app.post('/feedback',(req,res)=>{
+    const sql = " INSERT INTO feedback (`name`,`email`,`model`,`date`,`message`) VALUES (?,?,?,?,?) "
+    const values =[
+        name = req.body[0],
+        email = req.body[1],
+        model = req.body[2],
+        date  = req.body[3],
+        message = req.body[4]
+    ]
 
-    db.query(getUser,(G_Email),(err,data)=>{
+    db.query(sql,(values),(err,data)=>{
         if(err) console.log(err)
-
-        return res.json(data[0])
+        else
+        return res.json('Thanks')
     })
+
 })
 
 

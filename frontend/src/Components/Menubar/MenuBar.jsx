@@ -53,6 +53,8 @@ export default function MenuItems() {
 
             <MenuItem id='menu_items'><Link to='/accessories' style={{color:'black'}}>Accessories</Link></MenuItem>
 
+            <MenuItem id='menu_items'><Link to='/feedback' style={{color:'black'}}>Feedback</Link></MenuItem>
+
             <MenuItem id='menu_items_model'>Models</MenuItem>
 
             <MenuItem id='menu_items'><Link to={'/xc60'} style={{color:'black',width:'100%',textAlign:'center'}}>Volvo XC60</Link></MenuItem>

@@ -39,7 +39,7 @@ export default function MenuItems() {
           justifyContent:'center'
         }}
       >
-            <button id='close_btn' onClick={handleClose}><Close sx={{fontSize:'2rem'}}/></button>
+            <button id='close_btn' onClick={handleClose}><Close sx={{fontSize:'1.5rem'}}/></button>
 
             <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Home</Link></MenuItem>
               

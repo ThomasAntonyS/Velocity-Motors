@@ -1,6 +1,6 @@
 #close_btn{
     position: relative;
-    left: 80%;
+    left: 85%;
     display: flex;
     align-items: center;
     background-color: transparent;
@@ -35,12 +35,17 @@
 }
 
 @media (max-width:500px) {
+    #close_btn{
+        left: 80%;
+    }
     #menu_items{
         width: 45vw;
         height: 5vh;
         font-size: 1rem;
+        min-height: max-content;
     }
     .social_icon{
         font-size: 1rem;
+        min-height: max-content;
     }
 }

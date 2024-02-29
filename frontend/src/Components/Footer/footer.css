@@ -48,3 +48,35 @@
         margin: 30px 0px 0px 0px;
     }
 }
+
+@media (max-width:500px) {
+    .footer{
+        height: max-content;
+
+        .quick_links{
+            width: 60vw;
+            display: block;
+            margin-bottom: 40px;
+
+            #footer_heading{
+                font-size: 1.2rem;
+            }
+        }
+        .footer_models{
+            width: 40vw;
+            display: block;
+
+            #footer_modelHeading{
+                font-size: 1.2rem;
+            }
+        }
+        #footerLinks{
+            font-size: .8rem;
+            display: block;
+        }
+        #copyright{
+            bottom: 2%;
+            font-size: .8rem;
+        }
+    }
+}

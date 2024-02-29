@@ -39,10 +39,13 @@
     .Cars_{
         width: 100vw;
         height: 110vh;
+        min-height: max-content;
+
         p{
             margin-top: 7%;
             font-weight: bolder;
             font-size: 2.5rem;
+            min-height: max-content;
         }
     }
     .Car_cards{
@@ -52,11 +55,13 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        min-height: max-content;
 
         .Card{
             height: 60vh;
             width: 50vh;
             border-radius: 3px;
+            min-height: max-content;
             box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.55);
 
             img{
@@ -64,21 +69,25 @@
                 height: 50%;
                 object-fit: cover; 
                 object-position: center;
+                min-height: max-content;
             }
             h2{
                 margin-top: 15px;
                 margin-left: 10px;
                 display: flex;
+                min-height: max-content;
             }
             h4{
                 width: 95%;
                 margin-left: 10px;
                 margin-top: 5px;
                 color: rgb(47, 47, 47);
+                min-height: max-content;
             }
             p{ 
                 font-size: 1rem;
                 margin-left: 10px;
+                min-height: max-content;
             }
         }
         .Card:hover{
@@ -101,7 +110,7 @@
     }        
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
     .home{
         height: max-content;
         .Home_hero{

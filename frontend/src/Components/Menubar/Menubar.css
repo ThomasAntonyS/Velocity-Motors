@@ -34,7 +34,7 @@
     border-bottom: 2px solid black;
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
     #menu_items{
         width: 45vw;
         height: 5vh;

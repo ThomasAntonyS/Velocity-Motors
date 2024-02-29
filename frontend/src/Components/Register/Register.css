@@ -83,7 +83,7 @@
         width: 280px;
         box-sizing: border-box;
         transition: all .3s linear;
-        color: #000;
+        color: #000000;
         font-weight: 400;
         outline:none;
         margin-bottom: 5px;
@@ -97,7 +97,7 @@
         padding: 15px 40px;
         margin: 20px 2px;
         background-color: #0B60B0;
-        color: #fff;
+        color: #ffffff;
         font-size: 14px;
         font-weight: 500;
         border: none;
@@ -117,5 +117,42 @@
     }
   }
   
-  
+@media (max-width:500px) {
+  .register{
+    width: 100vw;
+    overflow: hidden;
+
+    .register_content{
+      width: 100vw;
+      height: max-content;
+
+      .left{
+        width: 100%;
+      }
+      .right{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: max-content;
+        margin-left: -100%;
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.922);
+
+        form{
+          height: max-content;
+        }
+        input{
+          color: black;
+          background-color: transparent;
+        }
+        ::placeholder{
+          color: rgba(43, 43, 43, 0.729);
+        }
+        button{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
   

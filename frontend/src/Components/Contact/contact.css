@@ -5,9 +5,11 @@
     background-color: black;
     height: 65vh;
     color: white;
+    min-height: max-content;
 
     .left{
         height: 80%;
+        min-height: max-content;
         width: 40%;
         display: grid;
         grid-template-columns: repeat(8,1fr);
@@ -137,6 +139,7 @@
         height: 80%;
         width: 40%;
         overflow: hidden;
+        min-height: max-content;
     
         p{
             font-size: 2rem;
@@ -193,7 +196,7 @@
     }
 }
 
-@media (max-width:450px) {
+@media (max-width:500px) {
     .contact_{
         display: block;
         width: 100vw;
@@ -235,17 +238,16 @@
                 font-size: 1.5rem;
             }
             #Or_txt{
-                font-size: 1rem;
+                display: none;
             }
             input{
                 font-size: 1rem;
+                margin-bottom: 20px;
             }
             button{
                 font-size: .8rem;
-                margin-left: -5px;
-            }
-            #Social_links{
-               margin-top: 0px;
+                margin-left: -10px;
+                margin-bottom: 20px;
             }
             #copyright{
 

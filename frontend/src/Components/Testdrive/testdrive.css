@@ -99,6 +99,7 @@
         .TD_sections{
             height:'max-content';
             form{
+                height:'max-content';
                 width: 70vw;
                 display: block;
     

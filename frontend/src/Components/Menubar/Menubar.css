@@ -34,7 +34,7 @@
     border-bottom: 2px solid black;
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     #close_btn{
         left: 80%;
     }

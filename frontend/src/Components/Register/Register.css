@@ -117,7 +117,7 @@
     }
   }
   
-@media (max-width:500px) {
+@media (max-width:600px) {
   .register{
     width: 100vw;
     overflow: hidden;

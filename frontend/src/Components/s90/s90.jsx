@@ -10,7 +10,7 @@ import Lane_assist from '../Assets/lane_assist.mp4'
 import Park_assist from '../Assets/park_assist.mp4'
 import Avoid_collision from '../Assets/avoid_collision.mp4'
 import { Link } from 'react-router-dom'
-import '../s90/s90.css'
+import './s90.css'
 import Footer from '../Footer/Footer'
 
 function S90(){

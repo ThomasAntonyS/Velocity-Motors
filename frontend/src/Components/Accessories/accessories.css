@@ -13,10 +13,11 @@
     .card{
         position: relative;
         width: 25vw;
-        height: 62vh;
+        height: 62.5vh;
         border: 1px solid white;
         margin: 20px;
         border-radius: 5px;
+        min-height: max-content;
 
         #card_title{
             font-size: 1.2rem;
@@ -39,23 +40,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: absolute;
-            bottom: 9%;
             margin-left: -10px;
         }
         a{
-            position: absolute;
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.05rem;
-            padding: 3px;
+            font-size: 1rem;
+            padding: 2px;
             color: white;
             background-color: transparent;
             outline: none;
             border: none;
-            bottom: 2%;
         }
         
     }
@@ -73,7 +70,7 @@
     }
     .card_row2{
         height: 50%;
-        width: 80%;
+        width: 90%;
         display: flex;
         justify-content: space-evenly;
         margin: 80px 0px;
@@ -88,7 +85,6 @@
         width: 80vw;
         height: 100%;
     }
-    
     input{
         background: transparent;
         border: none;
@@ -151,4 +147,53 @@
 
     }
 
+}
+@media (max-width:600px) {
+    .accessories{
+        height: max-content;
+
+        #accessories_title{
+            font-size: 2.5rem;
+        }
+        .card_row1 , .card_row2{
+            display: block;
+            height: max-content;
+            margin: auto;
+        }
+        .card{
+            display: block;
+            height: max-content;
+            width: 90%;
+
+            #card_title{
+                font-size: 1rem;
+            }
+            #card_desc{
+                font-size: .9rem;
+            }
+            #price{
+                font-size: .9rem;
+            }
+            a{
+                font-size: .8rem;
+            }
+
+        }
+        #accessories_input{
+            font-size: 2rem;
+        }
+        form{
+            height: max-content;
+            width: 100%;
+
+            input , select{
+                display: block;
+                width: 70%;
+                font-size: 1rem;
+            }
+            #access_submit{
+                font-size: .8rem;
+            }
+        }
+    }
 }

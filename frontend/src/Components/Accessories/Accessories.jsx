@@ -72,7 +72,7 @@ function Accessories(){
                         <p id='card_title'>Seat covers.</p>
                         <p id='card_desc'>Car Seat Protector, Waterproof 600D Fabric Car
                         Seat Protector Cover with 2 Storage Pockets, Anti-Slip and 
-                        Resistant Seat Cover Protector for your car.
+                        Resistant Seat Cover.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 1749</p>
                         <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>
@@ -94,7 +94,7 @@ function Accessories(){
                         <p id='card_title'>Neck Pillow. </p>
                         <p id='card_desc'>Frido Ultimate Car Neck Rest Pillow, Ultrasoft Car
                         Pillow for Comfortable Car Rides, Superior Neck Support Cushion
-                        with Washable Velvet Cover, Black.
+                        with Washable Velvet Cover.
                         </p>
                         <p id='price'><CurrencyRupeeOutlined/> 849</p>
                         <a href='#accessories_input'>Add Item<ArrowDownward sx={{fontSize:'1rem'}}/></a>

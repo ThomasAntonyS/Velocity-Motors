@@ -65,9 +65,6 @@ export default function Booking(){
                         <input type="text" placeholder='First Name' id='Fn' onChange={e=>{setFirstName(e.target.value)}} required/>
                         <input type="text" placeholder='Last Name' id='Ln' required onChange={e=>{setLastName(e.target.value)}}/>
                         <input type="email" placeholder='Email Id' minLength={13} id='Email' required onChange={e=>{setEmail(e.target.value)}}/>
-                    
-
-                    <br />
 
                     
                         <input type="text" placeholder='Phone Number' minLength={10} maxLength={10} id='Ph' required onChange={e=>{setPhone(e.target.value)}}/>
@@ -80,10 +77,6 @@ export default function Booking(){
                         </select>
 
                         <input type="text" placeholder='Street' id='St' required onChange={e=>{setStreet(e.target.value)}}/>
-                    
-
-                    <br />
-
                     
                         <input type="text" placeholder='City' id='Ct' required onChange={e=>{setCity(e.target.value)}}/>
                         <input type="text" placeholder='State' id='Sa' required onChange={e=>{setState(e.target.value)}}/>

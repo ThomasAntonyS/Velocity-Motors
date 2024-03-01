@@ -41,17 +41,17 @@ function Feedback(){
                         <br />
 
                         <select onChange={e=>{SetModel(e.target.value)}} required>
-                            <option selected disabled>Select a model</option>
+                            <option selected disabled>Select your model</option>
                             <option value="Volvo XC60">Volvo XC60</option>
                             <option value="Volvo S90">Volvo S90</option>
                             <option value="Mercedes AMG G63">Mercedes AMG G63</option>
                         </select>
 
-                        <input type="date" onChange={e=>{SetDate(e.target.value)}} required/>
+                        <input type="text" onChange={e=>{SetDate(e.target.value)}} placeholder='Date of purchase' required/>
 
                         <br />
 
-                        <textarea name="" id="" cols="20" rows="5" placeholder="Your Feedback !" onChange={e=>{SetMsg(e.target.value)}}></textarea>
+                        <textarea cols="20" rows="5" placeholder="Your Feedback !" onChange={e=>{SetMsg(e.target.value)}}></textarea>
 
                         <br />
 

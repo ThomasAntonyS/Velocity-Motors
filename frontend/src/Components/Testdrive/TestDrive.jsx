@@ -43,16 +43,13 @@ export default function TestDrive(){
                     <p id='TD_heading'>Test Drive.</p>
 
                     <p id='TD_content'>From the smooth acceleration on the open road to the effortless handling through twists and turns, each moment is an invitation to discover the <br />
-                        extraordinary. This is more than a test drive, it's a glimpse into the future of driving pleasure. Come, take the wheel, and let the <br />
-                        road become your canvas for excitement and exploration. Your journey towards automotive excellence starts here.<br />
+                        extraordinary. This is more than a test drive, it's a glimpse into the future of driving pleasure.<br />
                         </p>
                     
                     <form onSubmit={handleTestDrive}>
                         <input type="text" placeholder='Name' onChange={e=>{SetName(e.target.value)}} required/>
 
                         <input type='email' placeholder='Email' onChange={e=>{SetEmail(e.target.value)}} required/>
-
-                        <br />
                         
                         <input type="text" placeholder='Phone' minLength={10} maxLength={10} onChange={e=>{SetPhone(e.target.value)}} required/>
 
@@ -62,9 +59,7 @@ export default function TestDrive(){
                             <option value="Volvo S90">Volvo S90</option>
                             <option value="Mercedes AMG G63">Mercedes AMG G63</option>
                         </select>
-
-                        <br />
-
+                        
                         <select onClick={e=>{setSlot(e.target.value)}}>
                             <option value="" disabled selected>Select a slot</option>
                             <option value="20-04-2024,10AM">20-04-2024,10AM</option>

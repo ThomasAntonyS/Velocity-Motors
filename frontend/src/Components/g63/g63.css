@@ -98,6 +98,7 @@
         display: flex;
         height: 80vh;
         width: 40vw;
+        margin-top: -100px;
     
         p{
             color: white;
@@ -109,7 +110,7 @@
         #para_1{
             position: absolute;
             font-size: 1.2rem;
-            top: 14%;
+            top: 10%;
             display: block;
             align-items: center;
             width: 100%;
@@ -125,14 +126,14 @@
             position: absolute;;
             font-size: 1.2rem;
             left: 9%;
-            top: 40%;
+            top: 33%;
             width: 100%;
         }
         #para_3{
             position: absolute;;
             font-size: 1.2rem;
             left: 9%;
-            top: 62%;
+            top: 55%;
             width: 100%;
         }
         #para_4{
@@ -141,7 +142,7 @@
             align-items: center;
             font-weight: bold;
             left: 9%;
-            top: 80%;
+            top: 73%;
             width: 100%;
     
             #amount{
@@ -227,5 +228,102 @@
             transition:  .3s ease;
             border-radius: 10px;
         }
+    }
+}
+@media (max-width:600px) {
+    .g63{
+        height: max-content;
+        
+        .g63_Hero{
+            width: 100vw;
+            img{
+                width: 240%;
+                object-fit: contain;
+                object-position: left;
+                margin-left: -240px;
+            }
+            p{
+                font-size: 1rem;
+                bottom: 5%;
+            }
+        }
+        .g63_Features{
+            display: block;
+            height: max-content;
+
+            .v60_features_Images{
+                display: grid;
+                grid-template-rows: repeat(8, 13vw);
+                width: 80%;
+                height: max-content;
+                margin: 70px auto;
+                border-radius: 3px;
+            }
+            .g63_features_desc{
+                width: 80%;
+                margin: auto;
+
+                #para_1_heading,#para_2{
+                    font-size: 1rem;
+                    width: 100%;
+                }
+                #para_1{
+                   font-size: .8rem;
+                }
+                #para_3{
+                    display: none;
+                }
+                #para_4{
+                    font-size: 1rem;
+                    margin-top: -50px;
+                }
+                #para_5{
+                    font-size: .9rem;
+                    #amount{font-size: .9rem;}
+                }
+            }
+        }
+        .g63_feat_visual{
+            display: block;
+            height: max-content;
+            width: 85%;
+            margin: 90px auto;
+            
+            .visual_feature1, .visual_feature2,.visual_feature3{
+                width: 85%;
+                margin: 40px auto;
+                height: max-content;
+
+                video{
+                    display: block;
+                    width: 80%;
+                    height: 50vh;
+                    margin: 10px auto;
+                }
+                p{
+                    font-size: .9rem;
+                    width: 70%;
+                }
+            }
+        }
+        .g63_Bookings{
+            width: 85%;
+            margin: 0px auto;
+            height: max-content;
+
+            .Booking_Section1{
+                display: block;
+                width: 100%;
+                height: max-content;
+                margin: 50px auto 100px auto;
+
+                #book_1,#book_2{font-size: 1.5rem;}
+
+                #book_Sect_txt{font-size: 1rem;}
+
+                #Btn_Test,#Btn_Book{font-size: .8rem;}
+            }
+            .Booking_Section2{display: none;}
+        }  
     }
 }

@@ -28,8 +28,7 @@ export default function G63(){
                 In the interior, it combines impressive high-value appeal with a<br />
                 strong design idiom. Fine materials and a perfect finish enrich <br />
                 the interior. Details such as the air vents with angular surround and<br />
-                grab handle for the front passenger are typical design elements <br />
-                of the off-road vehicle. <br />
+                grab handle for the front passenger. <br />
                 </p>
 
                 <br />

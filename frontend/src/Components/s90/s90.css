@@ -1,11 +1,11 @@
 .s_90{
-    background-color: #0e0e0e;
+    background-color: black;
 
     .s90_Hero{
         position: relative;
         height: 100vh;
         min-width: 100vw;
-        overflow-x: hidden;
+        overflow: hidden;
     
         img{
             position: absolute;
@@ -17,18 +17,13 @@
         }
         p{
             position: absolute;
-            left: 50%;
-            top: 94.5%;
-            transform: translate(-50%,-50%);
-            width: max-content;
+            bottom: 0%;
+            height: max-content;
+            width: 100%;
             font-size: 1.7rem;
             color: white;
-        }
-        #s90{
-            background-color: #0e0e0e;
-            width: 100%;
-            padding-top: 20px;
-            margin-top: -10px;
+            background-color: black;
+            padding: 10px;
         }
     }
     .s90_Features{
@@ -93,9 +88,10 @@
         }
     }
     .s90_features_desc{
+        position: relative;
         display: flex;
         height: 80vh;
-        width: 40vw;
+        width: 50vw;
     
         p{
             color: white;
@@ -107,40 +103,40 @@
         #para_1{
             position: absolute;
             font-size: 1.2rem;
-            top: 14%;
+            top: 7%;
             display: block;
             align-items: center;
             width: 100%;
-            left: 9%;
             color: rgb(116, 115, 115);
             font-weight: bold;
+            margin: 10px;
         }
         #para_1_heading{
             color: white;
             font-size: 1.5rem;
         }
         #para_2{
-            position: absolute;;
+            position: absolute;
             font-size: 1.2rem;
-            left: 9%;
-            top: 35%;
+            top: 30%;
             width: 100%;
+            margin: 10px;
         }
         #para_3{
             position: absolute;;
             font-size: 1.2rem;
-            left: 9%;
-            top: 60%;
+            top: 57%;
             width: 100%;
+            margin: 10px;
         }
         #para_4{
             position: absolute;
             display: flex;
             align-items: center;
             font-weight: bold;
-            left: 9%;
-            top: 80%;
+            top: 85%;
             width: 100%;
+            margin: 10px;
     
             #amount{
                 font-size: 1.4rem;
@@ -223,20 +219,17 @@
             color: rgb(116, 115, 115);
         }
         #book_1{
-            margin-top: 3%;
+            margin-top: 5%;
             margin-left: 1%;
-            position: absolute;
         }
         #book_2{
             margin-left: 1%;
-            margin-top: 17%;
-            position: absolute;
+            margin-top: 10%;
         }
         #Btn_Book{
-            position: absolute;
             display: flex;
             align-items: center;
-            margin-top: 10%;
+            margin-top: 5%;
             margin-left: 1%;
             font-size: 1.3rem;
             padding: 5px;
@@ -250,10 +243,8 @@
             background-color: aliceblue;
         }
         #Btn_Test{
-            position: absolute;
             display: flex;
             align-items: center;
-            margin-top: 27%;
             margin-left: 1%;
             font-size: 1.3rem;
             padding: 5px;
@@ -261,6 +252,7 @@
             border: none;
             font-weight: bold;
             background-color: white;
+            margin-top: 5%;
         }
     }
     .Booking_Section2{
@@ -277,5 +269,104 @@
             transition:  .3s ease;
             border-radius: 10px;
         }
+    }
+}
+@media (max-width:600px) {
+    .s_90{
+        height: max-content;
+        
+        .s90_Hero{
+            width: 100vw;
+
+            img{
+                width: 240%;
+                object-fit: contain;
+                object-position: left;
+                margin-left: -225px;
+            }
+            p{
+                font-size: .9rem;
+                height: max-content;
+                width: 100%;
+                bottom: 5%;
+            }
+        }
+        .s90_Features{
+            display: block;
+            height: max-content;
+
+            .s90_features_Images{
+                display: grid;
+                grid-template-rows: repeat(8, 13vw);
+                width: 80%;
+                height: max-content;
+                margin: 70px auto;
+                border-radius: 3px;
+            }
+            .s90_features_desc{
+                width: 80%;
+                margin: auto;
+
+                #para_1_heading,#para_1{
+                    font-size: 1rem;
+                    width: 100%;
+                }
+                #para_2{
+                   font-size: 1rem;
+                   margin-top: -10px;
+                }
+                #para_3{
+                    font-size: 1rem;
+                    margin-top: 15px;
+                }
+                #para_4{
+                    font-size: 1rem;
+                    font-size: .9rem;
+                    #amount{font-size: .9rem;}
+                }
+            }
+        }
+        .s90_feat_visual{
+            display: block;
+            height: max-content;
+            width: 85%;
+            margin: 90px auto;
+            
+            .visual_feature1, .visual_feature2,.visual_feature3{
+                width: 85%;
+                margin: 40px auto;
+                height: max-content;
+
+                video{
+                    display: block;
+                    width: 80%;
+                    height: 50vh;
+                    margin: 10px auto;
+                }
+                p{
+                    font-size: .9rem;
+                    width: 70%;
+                }
+            }
+        }
+        .s90_Bookings{
+            width: 85%;
+            margin: 0px auto;
+            height: max-content;
+
+            .Booking_Section1{
+                display: block;
+                width: 100%;
+                height: max-content;
+                margin: 50px auto 100px auto;
+
+                #book_1,#book_2{font-size: 1.5rem;}
+
+                #book_Sect_txt{font-size: 1rem;}
+
+                #Btn_Test,#Btn_Book{font-size: .8rem;}
+            }
+            .Booking_Section2{display: none;}
+        }  
     }
 }

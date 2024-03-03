@@ -21,7 +21,7 @@ function S90(){
                 <img src={s90Img} alt="s90Img" />
                 <br />
                 <center>
-                <p id='s90'><b>Expect more.</b>Embrace the new and control the journey. Meet our luxury sedan with<br />
+                <p><b>Expect more.</b>Embrace the new and control the journey. Meet our luxury sedan with
                     Google built-in*.</p>
                 </center>
             </div>

@@ -39,39 +39,39 @@ function v60(){
                 <div className="v60_features_desc">
                     <p id='para_1'><span id='para_1_heading'><b>Immerse yourself in a premium
                     experience. </b><br /></span>
-                    XC60 is a popular and well-regarded vehicle known for <br />
-                    its combination of safety features, comfort, and <br />
+                    XC60 is a popular and well-regarded vehicle known for 
+                    its combination of safety features, comfort, and 
                     Scandinavian design aesthetics.</p>
 
                     <br />
 
                     <p id='para_2'><b>A refined drive </b><br />
-                    <span id='span_txt'>Enjoy smooth take-offs,<br />
-                    refined acceleration and<br />
-                    the optimised efficiency<br />
-                    and comfort of start/stop<br />
-                    technology.<br />
+                    <span id='span_txt'>Enjoy smooth take-offs,
+                    refined acceleration and
+                    the optimised efficiency
+                    and comfort of start/stop
+                    technology.
                     </span></p>
 
                     <p id='para_3'><b>Lower fuel consumption </b><br />
-                    <span id='span_txt'>The integrated starter<br />
-                    supports the engine and<br />
-                    reduces fuel consumption<br />
-                    while delivering relaxed and<br />
-                    controlled drive.<br />
+                    <span id='span_txt'>The integrated starter
+                    supports the engine and
+                    reduces fuel consumption
+                    while delivering relaxed and
+                    controlled drive.
                     </span></p>
 
                     
                     <p id='para_4'><b>Velocity with Google built in </b><br />
                     <span id='span_txt'>
                     Your Velocity with Google built in
-                    is seamlessly integrated for a <br />
+                    is seamlessly integrated for a 
                     uniquely helpful, connected, and
-                    more streamlined driving <br />
+                    more streamlined driving 
                     experience.
                     </span></p>
                     
-                    <p id='para_5'>Volvo V60 - Available at <CurrencyRupee/><span id='amount'>75,00,000</span></p>
+                    <p id='para_5'>Volvo V60 - Available at <CurrencyRupee sx={{fontSize:'1rem'}}/><span id='amount'>75,00,000</span></p>
                 </div>
             </div>
 
@@ -100,7 +100,7 @@ function v60(){
                         providing a 360° view and
                         flank sensors increasing
                         awareness of objects at
-                        the side of the car.
+                        the side.
                         </p>
                     </center>
 

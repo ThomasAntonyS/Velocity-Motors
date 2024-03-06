@@ -13,21 +13,31 @@ import { Link } from 'react-router-dom'
 import './s90.css'
 import Footer from '../Footer/Footer'
 
+
 function S90(){
+
     return(
+
         <div className='s_90'>
+
             <Header/>
+
             <div className="s90_Hero">
+
                 <img src={s90Img} alt="s90Img" />
                 <br />
                 <center>
                 <p><b>Expect more.</b>Embrace the new and control the journey. Meet our luxury sedan with
                     Google built-in*.</p>
                 </center>
+
             </div>
 
+
             <div className="s90_Features">
+
             <div className="s90_features_desc">
+
                     <p id='para_1'><span id='para_1_heading'><b>Indulge your senses.</b><br /></span>
                     Exclusive interior design details and high-end comfort<br />
                     make every mile a pleasure. <br />
@@ -52,21 +62,30 @@ function S90(){
                     </span></p>
                     
                     <p id='para_4'>Volvo S90 - Available at <CurrencyRupee/><span id='amount'>56,00,000</span></p>
+
                 </div>
 
+
                 <div className="s90_features_Images">
+
                     <img src={s90_row1} alt="s90_Img" id="s90_Img1" />
                     <img src={s90_row2} alt="s90_Img" id="s90_Img2" />
                     <img src={s90_row3b} alt="s90_Img" id="s90_Img3a" />
                     <img src={s90_row3a} alt="s90_Img" id="s90_Img3b" />
+
                 </div>
+
             </div>
 
+
             <div className="s90_feat_visual">
+
                 <div className="visual_feature1">
+
                     <video src={Lane_assist} autoPlay loop muted></video>
 
                     <center>
+
                         <p><b>Corrects drifting</b> <br />
                         If you start drifting across
                         your car can detect this
@@ -76,9 +95,12 @@ function S90(){
                         </p>
 
                     </center>
+
                 </div>
 
+
                 <div className="visual_feature2">
+
                     <video src={Park_assist} autoPlay loop muted></video>
 
                     <center>
@@ -93,22 +115,29 @@ function S90(){
 
                 </div>
 
+
                 <div className="visual_feature3">
+
                     <video src={Avoid_collision} autoPlay loop muted></video>
 
                     <center>
+
                         <p><b>Help crossing traffic</b> <br />
                         Our safety assistance
                         technology can help when
                         making a turn across
                         oncoming traffic.
                         </p>
+
                     </center>
 
                 </div>
+
             </div>
+
             
             <div className="s90_Bookings">
+
                     <div className="Booking_Section1">
 
                         <p id='book_1'><b>Book now</b> <br />
@@ -123,16 +152,22 @@ function S90(){
                         <br />of Velocity at a dealer near by.</span></p>
 
                         <Link to='/test_drive'><button id='Btn_Test'>Test Drive<ArrowRight/></button></Link>
+
                     </div>
 
+
                     <div className="Booking_Section2">
+
                         <img src={s90_Booking} alt="s90 Booking" />
+
                     </div>
+
             </div>
 
             <Footer/>
             
         </div>
+        
     )
 }
 export default S90;

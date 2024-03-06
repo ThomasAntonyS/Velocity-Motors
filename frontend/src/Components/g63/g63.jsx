@@ -11,19 +11,28 @@ import '../g63/g63.css'
 import Footer from '../Footer/Footer'
 
 export default function G63(){
+
+
     return(
         <div className='g63'>
+
         <Header/>
+
         <div className="g63_Hero">
+
             <img src={G63Hero} alt="s90Img" />
             <br />
             <center>
             <p id='g63'><b>Stronger Than Time.</b></p>
             </center>
+
         </div>
 
+
         <div className="g63_Features">
+
         <div className="g63_features_desc">
+
                 <p id='para_1'><span id='para_1_heading'><b>The G-Class remains true to itself</b> <br /></span>
                 In the interior, it combines impressive high-value appeal with a
                 strong design idiom. Fine materials and a perfect finish enrich 
@@ -49,18 +58,26 @@ export default function G63(){
                 </span></p>
                 
                 <p id='para_4'>Mercedes AMG G63 - Available at <CurrencyRupee sx={{fontSize:'1rem'}}/><span id='amount'>1,2,00,000</span></p>
+
             </div>
 
+
             <div className="g63_features_Images">
+
                 <img src={G63Img1} alt="g63_Img" id="g63_Img1" />
                 <img src={G63Img2} alt="g63_Img" id="g63_Img2" />
                 <img src={G63Img3} alt="g63_Img" id="g63_Img3a" />
                 <img src={G63Img4} alt="s90_Img" id="g63_Img3b" />
+
             </div>
+
         </div>
         
+
         <div className="g63_Bookings">
+
                 <div className="Booking_Section1">
+
                     <p id='book_1'><b>Book now</b> <br />
                     <span id='book_Sect_txt'>Book now to avail exciting offers.
                     Have miles of smiles.</span></p>
@@ -70,11 +87,17 @@ export default function G63(){
                     <span id='book_Sect_txt'>Experience the comfort, luxury and safety features 
                     <br />of Velocity at a dealer near by.</span></p>
                     <Link to='/test_drive'><button id='Btn_Test'>Test Drive<ArrowRight/></button></Link>
+
                 </div>
 
+
                 <div className="Booking_Section2">
+
                     <img src={G63Book} alt="g63 Booking" />
+
                 </div>
+
+                
         </div>
 
         <Footer/>

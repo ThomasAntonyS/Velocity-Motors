@@ -8,12 +8,17 @@ import { Link } from 'react-router-dom'
 import Contact from '../Contact/Contact'
 import  '../Home/home.css'
 
+
 export default function Home (){
+
 
     return(
         <div className="home">
+
             <Header/>
+
             <div className="Home_hero">
+
                 <img src={HomeHero} alt="Home page hero bg img" />
 
                 <center>
@@ -22,6 +27,7 @@ export default function Home (){
                 </center>
 
             </div>
+
 
             <div className="Cars_">
 
@@ -91,6 +97,8 @@ export default function Home (){
 
 
                 </div>
+
+                
             </div>
 
             <Contact/>

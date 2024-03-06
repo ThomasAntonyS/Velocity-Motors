@@ -6,6 +6,8 @@ import { Segment,Facebook,YouTube,Twitter,Close} from '@mui/icons-material';
 import { Link } from 'react-router-dom';
 import '../Menubar/Menubar.css'
 
+
+
 export default function MenuItems() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -16,7 +18,11 @@ export default function MenuItems() {
     setAnchorEl(null);
   };
 
+
+
   return (
+
+
     <div className='menu_bar'>
       <Button
         id="Menu_Button"
@@ -39,6 +45,8 @@ export default function MenuItems() {
           justifyContent:'center'
         }}
       >
+
+
             <button id='close_btn' onClick={handleClose}><Close sx={{fontSize:'1.5rem'}}/></button>
 
             <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Home</Link></MenuItem>
@@ -76,6 +84,8 @@ export default function MenuItems() {
         
       </Menu>
 
+
     </div>
+    
   );
 }

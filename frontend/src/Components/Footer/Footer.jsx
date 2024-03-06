@@ -3,7 +3,10 @@ import { Copyright } from '@mui/icons-material'
 import './footer.css'
 
 function Footer(){
+
+
     return(
+        
         <center>
 
             <div className="footer">

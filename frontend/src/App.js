@@ -15,8 +15,11 @@ import Feedback from './Components/Feedback/Feedback';
 function App() {
   return (
     <div className="App">
+
       <BrowserRouter>
+
         <Routes>
+
           <Route path='/' element={<Home/>}/>
 
           <Route path='/' element={<Contact/>}/>
@@ -40,7 +43,9 @@ function App() {
           <Route path='/feedback' element={<Feedback/>} />
           
         </Routes>
+
       </BrowserRouter>
+      
     </div>
   );
 }

@@ -13,30 +13,45 @@ import { Link } from 'react-router-dom'
 import '../v60/v60.css'
 import Footer from '../Footer/Footer'
 
+
 function v60(){
+
     return(
+
         <div className='v_60'>
+
             <Header/>
+
             <div className="v60_Hero">
+
                 <img src={v60Img} alt="v60Img" />
 
                 <br />
 
                 <center>
+
                 <p id='xc'><b>Intuitively yours.</b> Advanced technology helps connect your drive to <br />
                     personalised comfort and mobility</p>
+
                 </center>
+
             </div>
 
+
             <div className="v60_Features">
+
                 <div className="v60_features_Images">
+
                     <img src={v60_row1} alt="v60_Img" id="v60_Img1" />
                     <img src={v60_row2a} alt="v60_Img" id="v60_Img2a" />
                     <img src={v60_row2b} alt="v60_Img" id="v60_Img2b" />
                     <img src={v60_row3} alt="v60_Img" id="v60_Img3" />
+
                 </div>
 
+
                 <div className="v60_features_desc">
+
                     <p id='para_1'><span id='para_1_heading'><b>Immerse yourself in a premium
                     experience. </b><br /></span>
                     XC60 is a popular and well-regarded vehicle known for 
@@ -72,11 +87,16 @@ function v60(){
                     </span></p>
                     
                     <p id='para_5'>Volvo V60 - Available at <CurrencyRupee sx={{fontSize:'1rem'}}/><span id='amount'>75,00,000</span></p>
+
                 </div>
+
             </div>
 
+
             <div className="v60_feat_visual">
+
                 <div className="visual_feature1">
+
                     <video src={Lane_assist} autoPlay loop muted></video>
 
                     <center>
@@ -119,10 +139,13 @@ function v60(){
                     </center>
 
                 </div>
+
             </div>
             
             <div className="v60_Bookings">
+
                     <div className="Booking_Section1">
+
                         <p id='book_1'><b>Book now</b> <br />
 
                         <span id='book_Sect_txt'>Book now to avail exciting offers.
@@ -137,11 +160,17 @@ function v60(){
                         <br />of Velocity at a dealer near by.</span></p>
                         
                         <Link to='/test_drive'><button id='Btn_Test'>Test Drive<ArrowRight/></button></Link>
+
                     </div>
 
+
                     <div className="Booking_Section2">
+
                         <img src={v60_Booking} alt="v60 Booking" />
+
                     </div>
+
+                    
             </div>
 
             <Footer/>

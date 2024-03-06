@@ -10,6 +10,8 @@ app.use(bodyParser.json())
 app.use(cors());
 
 
+
+//Database Connection
 const db =mysql.createConnection({
     host:'localhost',
     user:'root',
@@ -18,6 +20,8 @@ const db =mysql.createConnection({
 })
 
 
+
+// Register Table Query
 app.post('/register',(req,res)=>{
 
     const checkData = ' SELECT `Email` from signIn_signUp where `Email`=? '
@@ -51,6 +55,7 @@ app.post('/register',(req,res)=>{
 
 
 
+//Login verification query
 app.post('/login',(req,res)=>{
     const sql = "SELECT `username`,`password` FROM signIn_signUp WHERE `email`=? AND `password`=? "
     const values =[
@@ -74,6 +79,8 @@ app.post('/login',(req,res)=>{
 
 
 
+
+//Test Drive table query
 app.post('/test_drive',(req,res)=>{
     const checkData = ' SELECT `Email` from test_drive where `Slotdate`=? '
 
@@ -110,6 +117,8 @@ app.post('/test_drive',(req,res)=>{
 
 
 
+
+//Book now Table Query
 app.post('/book_now',(req,res)=>{
     const sql = " INSERT INTO book_now (`firstname`,`lastname`,`email`,`phone`,`model`,`street`,`city`,`state`,`pincode`,`bookingid`) values (?,?,?,?,?,?,?,?,?,?)"
 
@@ -142,6 +151,8 @@ app.post('/book_now',(req,res)=>{
 
 
 
+
+//Accessories Table query
 app.post('/accessories',(req,res)=>{
 
     const checkStock = "SELECT `email` FROM accessories WHERE `item`=? "
@@ -178,6 +189,9 @@ app.post('/accessories',(req,res)=>{
 })
 
 
+
+
+//Feedback Table Query
 app.post('/feedback',(req,res)=>{
     const sql = " INSERT INTO feedback (`name`,`email`,`model`,`date`,`message`) VALUES (?,?,?,?,?) "
     const values =[

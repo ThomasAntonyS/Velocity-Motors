@@ -16,7 +16,7 @@
             object-fit: cover;
         }
         p{
-            position: absolute;
+            position: absolute; 
             left: 50%;
             top: 94.5%;
             transform: translate(-50%,-50%);
@@ -160,6 +160,7 @@
         display: flex;
         align-items: center;
         justify-content: space-evenly;
+        margin-top: -100px;
     }
     .Booking_Section1{
         width: 40vw;
@@ -174,17 +175,14 @@
             color: rgb(116, 115, 115);
         }
         #book_1{
-            margin-top: 3%;
+            margin-top: 5%;
             margin-left: 1%;
-            position: absolute;
         }
         #book_2{
             margin-left: 1%;
-            margin-top: 17%;
-            position: absolute;
+            margin-top: 10%;
         }
         #Btn_Book{
-            position: absolute;
             display: flex;
             align-items: center;
             margin-top: 10%;
@@ -201,10 +199,9 @@
             background-color: aliceblue;
         }
         #Btn_Test{
-            position: absolute;
             display: flex;
             align-items: center;
-            margin-top: 27%;
+            margin-top: 5%;
             margin-left: 1%;
             font-size: 1.3rem;
             padding: 5px;
@@ -239,70 +236,55 @@
             img{
                 width: 240%;
                 object-fit: contain;
-                object-position: left;
-                margin-left: -240px;
+                object-position: center;
+                margin-left: -50px;
             }
             p{
                 font-size: 1rem;
                 bottom: 5%;
+                height: max-content;
             }
         }
         .g63_Features{
             display: block;
             height: max-content;
 
-            .v60_features_Images{
+            .g63_features_Images{
                 display: grid;
                 grid-template-rows: repeat(8, 13vw);
                 width: 80%;
                 height: max-content;
-                margin: 70px auto;
                 border-radius: 3px;
+                margin: 200px auto 0px auto;
             }
             .g63_features_desc{
                 width: 80%;
                 margin: auto;
 
-                #para_1_heading,#para_2{
+                #para_1_heading{
                     font-size: 1rem;
                     width: 100%;
                 }
                 #para_1{
-                   font-size: .8rem;
-                }
-                #para_3{
-                    display: none;
-                }
-                #para_4{
+                    width: 80%; 
                     font-size: 1rem;
+                    margin-top: -30px;
+                }
+                #para_2{
+                    font-size: 1rem;
+                    width: 85%;
                     margin-top: -50px;
                 }
-                #para_5{
-                    font-size: .9rem;
-                    #amount{font-size: .9rem;}
+                #para_3{
+                    font-size: 1rem;
+                    margin-top: -100px;
+                    width: 85%;
                 }
-            }
-        }
-        .g63_feat_visual{
-            display: block;
-            height: max-content;
-            width: 85%;
-            margin: 90px auto;
-            
-            .visual_feature1, .visual_feature2,.visual_feature3{
-                width: 85%;
-                margin: 40px auto;
-                height: max-content;
-
-                video{
-                    display: block;
+                #para_4{
                     width: 80%;
-                    height: 50vh;
-                    margin: 10px auto;
-                }
-                p{
-                    font-size: .9rem;
-                    width: 70%;
+                    font-size: .7rem;
+                    margin: -150px 0px 0px 0px;
+                    #amount{font-size: .8rem;}
                 }
             }
         }

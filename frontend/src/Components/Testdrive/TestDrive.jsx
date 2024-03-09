@@ -88,11 +88,11 @@ export default function TestDrive(){
                         <select onClick={e=>{setSlot(e.target.value)}}>
 
                             <option value="" disabled selected>Select a slot</option>
-                            <option value="20-04-2024,10AM">20-04-2024,10AM</option>
-                            <option value="20-04-2024,12PM">20-04-2024,12PM</option>
-                            <option value="20-04-2024,2PM">20-04-2024,2PM</option>
-                            <option value="20-04-2024,4PM">20-04-2024,4PM</option>
-                            <option value="20-04-2024,6PM">20-04-2024,6PM</option>
+                            <option value="09-03-2024,10AM">09-03-2024,10AM</option>
+                            <option value="09-03-2024,12PM">09-03-2024,12PM</option>
+                            <option value="09-03-2024,2PM">09-03-2024,2PM</option>
+                            <option value="09-03-2024,4PM">09-03-2024,4PM</option>
+                            <option value="09-03-2024,6PM">09-03-2024,6PM</option>
 
                         </select>
 

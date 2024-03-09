@@ -90,7 +90,7 @@ app.post('/test_drive',(req,res)=>{
 
         if(err) console.log(err)
 
-        if(data.length>=2){
+        if(data.length>=1){
             return res.json('Slot unavailable')
         }
         else{
@@ -140,7 +140,6 @@ app.post('/book_now',(req,res)=>{
         if(err)
         {
             console.log(err)
-            alert("Somthing went wrong...")
         }
         else{
             return res.json('Success')
@@ -172,7 +171,7 @@ app.post('/accessories',(req,res)=>{
         if(err) 
             console.log(err)
         
-        if(data.length>=2)
+        if(data.length>=1)
             return res.json("No stock")
 
         else{

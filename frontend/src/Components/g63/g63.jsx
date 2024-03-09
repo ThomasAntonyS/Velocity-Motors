@@ -34,26 +34,26 @@ export default function G63(){
         <div className="g63_features_desc">
 
                 <p id='para_1'><span id='para_1_heading'><b>The G-Class remains true to itself</b> <br /></span>
-                In the interior, it combines impressive high-value appeal with a
-                strong design idiom. Fine materials and a perfect finish enrich 
-                the interior. Details such as the air vents with angular surround and
+                In the interior, it combines impressive high-value appeal <br />
+                with a strong design idiom. Fine materials and a perfect finish <br/>
+                enrich the interior. Details such as the air vents  and <br/>
                 grab handle for the front passenger. 
                 </p>
 
                 <br />
 
                 <p id='para_2'><b>Unique and completely individual</b><br />
-                <span id='span_txt'>With the G manufaktur, you can make your G-Class unique.
-                The individualisation programme offers you more than a million
-                combination options. Starting with the colour choice: choose from
+                <span id='span_txt'>With the G manufaktur, you can make your G-Class unique.<br/>
+                The individualisation programme offers you more than a million<br/>
+                combination options. Starting with the colour choice: choose from<br/>
                 29G manufaktur paint colours.
                 </span></p>
 
                 
                 <p id='para_3'><b>All data included</b><br />
                 <span id='span_txt'>
-                As ever, superior off-road performance defines the G-Class.
-                The G-Class has always led the way in terms of climbing ability,
+                As ever, superior off-road performance defines the G-Class.<br/>
+                The G-Class has always led the way in terms of climbing ability,<br/>
                 fording depth and side slope angle.
                 </span></p>
                 

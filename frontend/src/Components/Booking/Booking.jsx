@@ -39,7 +39,7 @@ export default function Booking(){
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
             if(res.data==='Success')
-                setPopup("Booking Successful. We'll contact you shortly")
+                setPopup("Booking Successful")
         })
         .catch(err => console.log(err))
     }
@@ -52,7 +52,7 @@ export default function Booking(){
             <Header/>
 
             <Popup message={popup} 
-            status={ (popup.message=="Booking Successful. We'll contact you shortly") ? 'Success' : 'Fail' } />
+            status={ (popup=='Booking Successful') ? 'Success' : 'Fail' } /> 
 
 
             <div className="booking_Content">

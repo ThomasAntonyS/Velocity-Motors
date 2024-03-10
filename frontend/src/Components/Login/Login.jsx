@@ -1,6 +1,6 @@
 import '../Login/Login.css'
 import {Link} from 'react-router-dom'
-import {ArrowCircleRightSharp} from '@mui/icons-material'
+import {ArrowCircleRightSharp, Visibility, VisibilityOff} from '@mui/icons-material'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
@@ -10,6 +10,9 @@ function Login(){
     const navigate=useNavigate();
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
+    const [type,setType] = useState('password')
+    const [passIcon,setPassIcon] = useState(<Visibility/>)
+    const [showPass,setShowPass] = useState('false')
 
     const handleLogin=(event)=>{
         event.preventDefault(); 
@@ -24,6 +27,18 @@ function Login(){
         .catch(err=>console.log(err))
     }
 
+    const toggleEye=()=>{
+        if(showPass==='false'){
+            setPassIcon(<VisibilityOff />) 
+            setType('text')
+            setShowPass('true')
+        }    
+        else{
+            setPassIcon(<Visibility/>) 
+            setType('password')
+            setShowPass('false')
+        }
+    }
 
 
     return(
@@ -53,10 +68,11 @@ function Login(){
                     required/>
 
 
-                    <input type="password"
+                    <input type={type}
                     placeholder="Password" 
                     onChange={e=>(setPassword(e.target.value))} 
                     required/>
+                    <span className='eye-icon' onClick={toggleEye}>{passIcon}</span>
 
 
                     <button>Log in</button>

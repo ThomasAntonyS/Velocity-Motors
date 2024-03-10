@@ -1,6 +1,6 @@
 import '../Testdrive/testdrive.css'
 import Header from '../Header/Header'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Popup from '../Popup/Popup'
 
@@ -13,6 +13,17 @@ export default function TestDrive(){
     const [model,SetModel] = useState('')
     const [slot,setSlot] = useState('')
     const [popup,setPopup] = useState('')
+    const [curDate,setDate] = useState('')
+    const [curMonth,setMonth] = useState('')
+    const [curYear,setYear] = useState('')
+
+
+    useEffect(()=>{
+        const date = new Date()
+        setDate((date.getDate()))
+        setMonth(((date.getMonth()+1)))
+        setYear((date.getFullYear()))
+    },[])
 
 
     const handleTestDrive=(event)=>{
@@ -26,7 +37,7 @@ export default function TestDrive(){
             }
             if(res.data==='Success')
             {
-                setPopup("Slot booking Successfull")
+                setPopup('Slot booking Successfull')
             }
         })
         .catch(Error=>console.log(Error))
@@ -40,7 +51,7 @@ export default function TestDrive(){
             <Header/>
 
             <Popup message={popup} 
-            status={ (popup=='Slot booking Successfull') ? 'Success' : 'Fail' } />
+            status={ (popup==='Slot booking Successfull') ? 'Success' : 'Fail' } />
 
 
             <div className="TD_sections">
@@ -88,11 +99,11 @@ export default function TestDrive(){
                         <select onClick={e=>{setSlot(e.target.value)}}>
 
                             <option value="" disabled selected>Select a slot</option>
-                            <option value="09-03-2024,10AM">09-03-2024,10AM</option>
-                            <option value="09-03-2024,12PM">09-03-2024,12PM</option>
-                            <option value="09-03-2024,2PM">09-03-2024,2PM</option>
-                            <option value="09-03-2024,4PM">09-03-2024,4PM</option>
-                            <option value="09-03-2024,6PM">09-03-2024,6PM</option>
+                            <option value={curDate+"-"+curMonth+"-"+curYear+",10AM"}>{curDate}-{curMonth}-{curYear},10AM</option>
+                            <option value={curDate+"-"+curMonth+"-"+curYear+",12PM"}>{curDate}-{curMonth}-{curYear},12PM</option>
+                            <option value={curDate+"-"+curMonth+"-"+curYear+",2PM"}>{curDate}-{curMonth}-{curYear},2PM</option>
+                            <option value={curDate+"-"+curMonth+"-"+curYear+",4PM"}>{curDate}-{curMonth}-{curYear},4PM</option>
+                            <option value={curDate+"-"+curMonth+"-"+curYear+",6PM"}>{curDate}-{curMonth}-{curYear},6PM</option>
 
                         </select>
 

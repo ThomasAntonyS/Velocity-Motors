@@ -49,11 +49,11 @@ function Accessories(){
         .then(res=>{
 
             if(res.data==='Success'){
-                setPopup("Order Placed...")     
+                setPopup('Order Placed...')     
             }
 
             if(res.data==='No stock'){
-                setPopup("Item out of Stock...") 
+                setPopup('Item out of Stock...') 
             }
         })
     }
@@ -152,7 +152,7 @@ function Accessories(){
                 <form id='form_input' onSubmit={handleAccessories}>
 
                     <Popup message={popup} 
-                    status={(popup=='Order Placed...') ? 'Success' : 'Fail'} />
+                    status={(popup==='Order Placed...') ? 'Success' : 'Fail'} />
 
 
                     <input type="text"

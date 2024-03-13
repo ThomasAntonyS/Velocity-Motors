@@ -107,7 +107,7 @@ function Register(){
 
 
                         <input type="email" 
-                        placeholder="Email" 
+                        placeholder="Email ID"
                         onChange={e=>SetEmail(e.target.value)} 
                         required/>
 

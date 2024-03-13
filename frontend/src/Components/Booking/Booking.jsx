@@ -73,7 +73,7 @@ export default function Booking(){
 
                         <input type="text"
                         placeholder='First Name' 
-                        id='Fn' 
+                        id='Fn'
                         onChange={e=>{setFirstName(e.target.value)}} 
                         required />
 
@@ -86,7 +86,7 @@ export default function Booking(){
 
 
                         <input type="email" 
-                        placeholder='Email Id' 
+                        placeholder='Email ID' 
                         minLength={13} id='Email' 
                         required 
                         onChange={e=>{setEmail(e.target.value)}} />
@@ -96,7 +96,9 @@ export default function Booking(){
                         placeholder='Phone Number' 
                         minLength={10} 
                         maxLength={10} 
-                        id='Ph' 
+                        id='Ph'
+                        title="Numbers and '(' ')' are only accepted"
+                        pattern="[0-9]{10}" 
                         required 
                         onChange={e=>{setPhone(e.target.value)}}/>
 

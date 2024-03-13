@@ -74,15 +74,17 @@ export default function TestDrive(){
 
 
                         <input type='email' 
-                        placeholder='Email' 
+                        placeholder='Email ID' 
                         onChange={e=>{SetEmail(e.target.value)}} 
                         required/>
 
                         
                         <input type="text" 
-                        placeholder='Phone' 
+                        placeholder='Phone Number' 
                         minLength={10} 
-                        maxLength={10} 
+                        maxLength={10}
+                        title="Numbers and '(' ')' are only accepted"
+                        pattern="[0-9]{10}" 
                         onChange={e=>{SetPhone(e.target.value)}} 
                         required/>
 

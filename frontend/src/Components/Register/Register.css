@@ -93,12 +93,14 @@
         position: absolute;
         top: 52%;
         left: 90%;
+        color: rgb(62, 62, 62)
       }
       .eye-icon2{
         width: max-content;
         position: absolute;
         top: 64%;
         left: 90%;
+        color: rgb(62, 62, 62)
       }
       button{
         display: flex;

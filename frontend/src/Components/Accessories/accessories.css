@@ -133,7 +133,7 @@
         border: 1px solid white;
         border-radius: 20px;
         padding: 10px 20px;
-        margin: 25px 5px 0px 20px;
+        margin: 25px 5px 20px 20px;
     }
     #access_submit:hover{
         transition: .2s ease;

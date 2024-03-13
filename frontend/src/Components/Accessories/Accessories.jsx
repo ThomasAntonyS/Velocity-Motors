@@ -156,13 +156,13 @@ function Accessories(){
 
 
                     <input type="text"
-                    placeholder='Full Name' 
+                    placeholder='Full Name'
                     onChange={e=>{setName(e.target.value)}} 
                     required />
 
 
                     <input type="email" 
-                    placeholder='Email' 
+                    placeholder='Email ID' 
                     onChange={e=>{setEmail(e.target.value)}} 
                     required />
 
@@ -170,7 +170,9 @@ function Accessories(){
                     <input type="text"
                     maxLength={10} 
                     minLength={10} 
-                    placeholder='Phone' 
+                    placeholder='Phone Number' 
+                    title="Numbers and '(' ')' are only accepted"
+                    pattern="[0-9]{10}"
                     onChange={e=>{setPhone(e.target.value)}} 
                     required />
 

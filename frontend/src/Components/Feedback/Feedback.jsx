@@ -71,7 +71,7 @@ function Feedback(){
                         <input type="text" 
                         onChange={e=>{SetDate(e.target.value)}} 
                         placeholder='Date of purchase' 
-                        required/>
+                        required/> 
 
 
                         <br />
@@ -79,7 +79,9 @@ function Feedback(){
                         <textarea 
                         cols="20" rows="5" 
                         placeholder="Your Feedback !" 
-                        onChange={e=>{SetMsg(e.target.value)}} ></textarea>
+                        onChange={e=>{SetMsg(e.target.value)}} 
+                        required
+                        ></textarea>
 
 
                         <br />

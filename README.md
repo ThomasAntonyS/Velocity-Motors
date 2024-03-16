@@ -8,7 +8,7 @@
     Mysql - Express Js -  React - Node Js
     <br/>
     <br/>
-    <a href="https://github.com//Velocity Motors">Live Demo</a>
+    <a href=""https://velocity-motors.vercel.app/>Live Demo</a>
   </h2>
 </p>
 

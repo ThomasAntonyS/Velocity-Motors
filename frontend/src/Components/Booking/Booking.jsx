@@ -7,15 +7,18 @@ import Popup from '../Popup/Popup'
 export default function Booking(){
 
 
-    const [firstName,setFirstName] = useState('') 
-    const [lastName,setLastName] = useState('')
-    const [email,setEmail] = useState('')
-    const [phone,setPhone] = useState('')
-    const [model,setModel] = useState('')
-    const [street,setStreet] = useState('')
-    const [city,setCity] = useState('')
-    const [state,setState] = useState('')
-    const [pincode,setPincode] = useState('')
+    const [formData,setFormData] = useState({
+        firstName:'',
+        lastName:'',
+        email:'',
+        phone:'',
+        model:'',
+        street:'',
+        city:'',
+        state:'',
+        pincode:''
+    })
+
     const [popup,setPopup] = useState('')
 
 
@@ -28,14 +31,14 @@ export default function Booking(){
             result += characters.charAt(Math.floor(Math.random() * 62));
             counter += 1;
         }
-        return ("VM_"+result)
+        return('VM'+result)
     }
 
 
     const handleBook = (event) =>{
         event.preventDefault()
-        var bookingId = generateBookingId()
-        const values = [firstName,lastName,email,phone,model,street,city,state,pincode,bookingId]
+        const bookingid = generateBookingId()
+        const values = [formData,bookingid]
         axios.post('http://localhost:3001/book_now',values)
         .then(res=>{
             if(res.data==='Success')
@@ -74,7 +77,7 @@ export default function Booking(){
                         <input type="text"
                         placeholder='First Name' 
                         id='Fn'
-                        onChange={e=>{setFirstName(e.target.value)}} 
+                        onChange={e=>setFormData({...formData,firstName:e.target.value})} 
                         required />
 
 
@@ -82,14 +85,14 @@ export default function Booking(){
                         placeholder='Last Name' 
                         id='Ln'
                         required 
-                        onChange={e=>{setLastName(e.target.value)}} />
+                        onChange={e=>setFormData({...formData,lastName:e.target.value})}  />
 
 
                         <input type="email" 
                         placeholder='Email ID' 
                         minLength={13} id='Email' 
                         required 
-                        onChange={e=>{setEmail(e.target.value)}} />
+                        onChange={e=>setFormData({...formData,email:e.target.value})}  />
 
                     
                         <input type="text" 
@@ -100,11 +103,11 @@ export default function Booking(){
                         title="Numbers and '(' ')' are only accepted"
                         pattern="[0-9]{10}" 
                         required 
-                        onChange={e=>{setPhone(e.target.value)}}/>
+                        onChange={e=>setFormData({...formData,phone:e.target.value})} />
 
 
 
-                        <select id='Se' onChange={e=>{setModel(e.target.value)}} required>
+                        <select id='Se' onChange={e=>setFormData({...formData,model:e.target.value})} required>
 
                             <option value="" selected disabled>Choose a model</option>
                             <option value="Volvo XC60">Volvo XC60</option>
@@ -118,21 +121,21 @@ export default function Booking(){
                         placeholder='Street' 
                         id='St' 
                         required 
-                        onChange={e=>{setStreet(e.target.value)}} />
+                        onChange={e=>setFormData({...formData,street:e.target.value})}  />
                     
 
                         <input type="text" 
                         placeholder='City' 
                         id='Ct' 
                         required 
-                        onChange={e=>{setCity(e.target.value)}} />
+                        onChange={e=>setFormData({...formData,city:e.target.value})}  />
 
 
                         <input type="text" 
                         placeholder='State' 
                         id='Sa' 
                         required 
-                        onChange={e=>{setState(e.target.value)}} />
+                        onChange={e=>setFormData({...formData,state:e.target.value})}  />
 
 
                         <input type="text" 
@@ -141,7 +144,7 @@ export default function Booking(){
                         maxLength={7} 
                         id='Pc' 
                         required 
-                        onChange={e=>{setPincode(e.target.value)}}/>
+                        onChange={e=>setFormData({...formData,pincode:e.target.value})} />
                     
 
                     <br />

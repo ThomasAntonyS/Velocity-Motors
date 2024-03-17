@@ -7,17 +7,20 @@ import './feedback.css'
 function Feedback(){
 
 
-    const [name,SetName] = useState('')
-    const [email,SetEmail] = useState('') 
-    const [date,SetDate] = useState('')
-    const [model,SetModel] = useState('')
-    const [msg,SetMsg] = useState('')
+    const [formData,setFormData] = useState({
+        name:'',
+        email:'',
+        date:'',
+        model:'',
+        msg:''
+    })
+
     const [popup,setPopup] = useState('')
 
 
     const handleFeedback = (event) =>{
         event.preventDefault()
-        axios.post('http://localhost:3001/feedback',[name,email,model,date,msg])
+        axios.post('http://localhost:3001/feedback',formData)
         .then(res=>{
             if(res.data==='Thanks')
             setPopup('Thanks for your Feedback')
@@ -45,20 +48,20 @@ function Feedback(){
 
                         <input type="text" 
                         placeholder='Name' 
-                        onChange={e=>{SetName(e.target.value)}} 
+                        onChange={e=>setFormData({...formData,name:e.target.value})} 
                         required />
 
 
                         <input type='email' 
                         placeholder='Email' 
-                        onChange={e=>{SetEmail(e.target.value)}} 
+                        onChange={e=>setFormData({...formData,email:e.target.value})} 
                         required />
 
 
                         <br />
 
 
-                        <select onChange={e=>{SetModel(e.target.value)}} required>
+                        <select onChange={e=>setFormData({...formData,model:e.target.value})} required>
 
                             <option selected disabled>Select your model</option>
                             <option value="Volvo XC60">Volvo XC60</option>
@@ -69,7 +72,7 @@ function Feedback(){
 
 
                         <input type="text" 
-                        onChange={e=>{SetDate(e.target.value)}} 
+                        onChange={e=>setFormData({...formData,date:e.target.value})} 
                         placeholder='Date of purchase' 
                         required/> 
 
@@ -79,7 +82,7 @@ function Feedback(){
                         <textarea 
                         cols="20" rows="5" 
                         placeholder="Your Feedback !" 
-                        onChange={e=>{SetMsg(e.target.value)}} 
+                        onChange={e=>setFormData({...formData,msg:e.target.value})} 
                         required
                         ></textarea>
 

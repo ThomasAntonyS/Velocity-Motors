@@ -9,10 +9,12 @@ import {useNavigate} from 'react-router-dom'
 function Register(){
 
     const navigate = useNavigate()
-    const [username,SetUsername] = useState('')
-    const [email,SetEmail] = useState('')
-    const [password,SetPassword] = useState('')
-    const [cnfpassword,SetCnfPassword] = useState('')
+    const [formData,setFormData] = useState({
+        username:'',
+        email:'',
+        password:'',
+        cnfpassword:''
+    })
     const [type,setType] = useState('password')
     const [typeCnf,setTypeCnf] = useState('password')
     const [passIcon,setPassIcon] = useState(<Visibility/>)
@@ -24,9 +26,9 @@ function Register(){
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        if(password.match(cnfpassword)){
+        if((formData.password).match(formData.cnfpassword)){
             try {  
-                axios.post('http://localhost:3001/register',[username,email,password])
+                axios.post('http://localhost:3001/register',formData)
                 .then(res=>{
                     if(res.data==="Success")
                         navigate('/login')
@@ -102,26 +104,26 @@ function Register(){
 
                         <input type="text" 
                         placeholder="Name" 
-                        onChange={e=>SetUsername(e.target.value)} 
+                        onChange={e=>setFormData({...formData,username:e.target.value})} 
                         required />
 
 
                         <input type="email" 
                         placeholder="Email ID"
-                        onChange={e=>SetEmail(e.target.value)} 
+                        onChange={e=>setFormData({...formData,email:e.target.value})} 
                         required/>
 
 
                         <input type={type}
                         placeholder="Password" 
-                        onChange={e=>SetPassword(e.target.value)} 
+                        onChange={e=>setFormData({...formData,password:e.target.value})} 
                         required/>
                         <span className='eye-icon1' onClick={toggleEyePass}>{passIcon}</span>
 
 
                         <input type={typeCnf} 
                         placeholder="Confirm Password" 
-                        onChange={e=>SetCnfPassword(e.target.value)} 
+                        onChange={e=>setFormData({...formData,cnfpassword:e.target.value})}  
                         required/>
                         <span className='eye-icon2' onClick={toggleEyePassCnf}>{passIconCnf}</span>
 

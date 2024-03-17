@@ -25,7 +25,7 @@ const db =mysql.createConnection({
 app.post('/register',(req,res)=>{
 
     const checkData = ' SELECT `Email` from signIn_signUp where `Email`=? '
-    const checkEmail=req.body[1]
+    const checkEmail=req.body.email
 
     db.query(checkData,(checkEmail),(err,data)=>{
 
@@ -39,9 +39,9 @@ app.post('/register',(req,res)=>{
             const sql = "INSERT INTO signIn_signUp (`username`,`email`,`password`) values (?,?,?)"
 
             const values =[
-                username=req.body[0],
-                email=req.body[1],
-                password=req.body[2]
+                username=req.body.username,
+                email=req.body.email,
+                password=req.body.password
             ]
             db.query(sql,(values),(err,data)=>{
                 if(err) console.log(err)
@@ -124,16 +124,16 @@ app.post('/book_now',(req,res)=>{
 
 
     const bookData = [
-        firstName = req.body[0],
-        lastName = req.body[1],
-        email = req.body[2],
-        phone = req.body[3],
-        model = req.body[4],
-        street = req.body[5],
-        city = req.body[6],
-        state = req.body[7],
-        pincode = req.body[8],
-        bookingId = req.body[9]
+        firstName = req.body[0].firstName,
+        lastName = req.body[0].lastName,
+        email = req.body[0].email,
+        phone = req.body[0].phone,
+        model = req.body[0].model,
+        street = req.body[0].street,
+        city = req.body[0].city,
+        state = req.body[0].state,
+        pincode = req.body[0].pincode,
+        bookingId = req.body[1]
     ]
 
     db.query(sql,(bookData),(err,data)=>{
@@ -194,11 +194,11 @@ app.post('/accessories',(req,res)=>{
 app.post('/feedback',(req,res)=>{
     const sql = " INSERT INTO feedback (`name`,`email`,`model`,`date`,`message`) VALUES (?,?,?,?,?) "
     const values =[
-        name = req.body[0],
-        email = req.body[1],
-        model = req.body[2],
-        date  = req.body[3],
-        message = req.body[4]
+        name = req.body.name,
+        email = req.body.email,
+        model = req.body.model,
+        date  = req.body.date,
+        message = req.body.msg
     ]
 
     db.query(sql,(values),(err,data)=>{

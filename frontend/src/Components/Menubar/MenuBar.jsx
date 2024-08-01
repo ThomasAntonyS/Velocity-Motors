@@ -51,7 +51,7 @@ export default function MenuItems() {
 
             <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Home</Link></MenuItem>
 
-            <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Profile</Link></MenuItem>
+            <MenuItem id='menu_items'><Link to='/profile'style={{color:'black',width:'100%',textAlign:'center'}}>Profile</Link></MenuItem>
               
             <MenuItem id='menu_items'><Link to='/login' style={{color:'black',width:'100%',textAlign:'center'}}>Login</Link></MenuItem>
 

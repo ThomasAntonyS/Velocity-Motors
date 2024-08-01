@@ -50,6 +50,8 @@ export default function MenuItems() {
             <button id='close_btn' onClick={handleClose}><Close sx={{fontSize:'1.5rem'}}/></button>
 
             <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Home</Link></MenuItem>
+
+            <MenuItem id='menu_items'><Link to='/'style={{color:'black',width:'100%',textAlign:'center'}}>Profile</Link></MenuItem>
               
             <MenuItem id='menu_items'><Link to='/login' style={{color:'black',width:'100%',textAlign:'center'}}>Login</Link></MenuItem>
 

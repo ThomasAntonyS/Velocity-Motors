@@ -1,10 +1,11 @@
 import '../Login/Login.css'
 import {Link} from 'react-router-dom'
 import {ArrowCircleRightSharp, Visibility, VisibilityOff} from '@mui/icons-material'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-
+import userContext from '../../Context/userContext'
+ 
 
 function Login(){
     const navigate=useNavigate();
@@ -13,19 +14,28 @@ function Login(){
     const [type,setType] = useState('password')
     const [passIcon,setPassIcon] = useState(<Visibility/>)
     const [showPass,setShowPass] = useState('false')
+    const {setLoggedIn,setUser} = useContext(userContext)
 
     const handleLogin=(event)=>{
         event.preventDefault(); 
         axios.post('http://localhost:3001/login',[email,password])
         .then(res=>{
-            if(res.data==='Success')
-            navigate('/')
-            else
-            alert("Incorrect Username or password...")
-            window.location.reload(true)
+            console.log(res)
+            if(res.data[0]==='Success'){
+                setLoggedIn(true)
+                setUser(res.data[1])
+                navigate('/profile')
+            }
+            else{
+                console.log(res)
+                alert("Incorrect Username or password...")
+                window.location.reload(true)
+            }
         })
         .catch(err=>console.log(err))
+
     }
+
 
     const toggleEye=()=>{
         if(showPass==='false'){

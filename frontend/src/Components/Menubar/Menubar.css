@@ -9,9 +9,9 @@
 }
 #_menu{
     margin-top: -5vh;
+    margin-left: -10px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 1px;
-    margin-left: -.2vw;
 }
 #menu_items{
     display: flex;
@@ -20,6 +20,7 @@
     font-weight: bold;
     width: 15vw;
     height: 7vh;
+    margin: 0px auto;
 }
 #menu_items:hover{
     transition: .5s cubic-bezier(0.77, 0, 0.175, 1);

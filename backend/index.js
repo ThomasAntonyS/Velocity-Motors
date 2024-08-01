@@ -45,7 +45,6 @@ app.post('/register',(req,res)=>{
             ]
             db.query(sql,(values),(err,data)=>{
                 if(err) console.log(err)
-                
                 return res.json("Success")
             })
         }
@@ -69,7 +68,8 @@ app.post('/login',(req,res)=>{
         }
         if(data.length>0)
         {
-            return res.json('Success')
+            const response = ['Success',data[0].username]
+            return res.json(response)
         }
         else{
             return res.json('Fail')

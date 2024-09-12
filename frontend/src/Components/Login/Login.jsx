@@ -1,10 +1,9 @@
 import '../Login/Login.css'
 import {Link} from 'react-router-dom'
 import {ArrowCircleRightSharp, Visibility, VisibilityOff} from '@mui/icons-material'
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
-import userContext from '../../Context/userContext'
  
 
 function Login(){
@@ -14,7 +13,6 @@ function Login(){
     const [type,setType] = useState('password')
     const [passIcon,setPassIcon] = useState(<Visibility/>)
     const [showPass,setShowPass] = useState('false')
-    const {setLoggedIn,setUser} = useContext(userContext)
 
     const handleLogin=(event)=>{
         event.preventDefault(); 
@@ -22,8 +20,6 @@ function Login(){
         .then(res=>{
             console.log(res)
             if(res.data[0]==='Success'){
-                setLoggedIn(true)
-                setUser(res.data[1])
                 navigate('/profile')
             }
             else{

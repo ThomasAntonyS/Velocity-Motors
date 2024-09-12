@@ -11,16 +11,11 @@ import G63 from './Components/g63/g63';
 import Booking from './Components/Booking/Booking';
 import Accessories from './Components/Accessories/Accessories';
 import Feedback from './Components/Feedback/Feedback';
-import UserContextProvider from './Context/UserContextProvider';
-import Profile from './Components/Profile/Profile';
-
 function App() {
   return (
     <div className="App">
 
       <BrowserRouter>
-
-      <UserContextProvider>
 
         <Routes>
 
@@ -78,15 +73,8 @@ function App() {
                 path='/feedback' 
                 element={<Feedback/>} 
             />
-
-          <Route 
-                path='/profile' 
-                element={<Profile/>} 
-            />
           
         </Routes>
-
-      </UserContextProvider>
 
       </BrowserRouter>
       

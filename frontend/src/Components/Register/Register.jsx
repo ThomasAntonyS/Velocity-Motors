@@ -4,7 +4,6 @@ import {ArrowCircleRightSharp,Visibility, VisibilityOff} from '@mui/icons-materi
 import { useContext, useState } from 'react'
 import axios from 'axios'
 import {useNavigate} from 'react-router-dom'
-import userContext from '../../Context/userContext'
 
 
 function Register(){
@@ -22,7 +21,6 @@ function Register(){
     const [passIconCnf,setPassIconCnf] = useState(<Visibility/>)
     const [showPass,setShowPass] = useState('false')
     const [showPassCnf,setShowPassCnf] = useState('false')
-    const {setUser} = useContext(userContext)
 
 
 
@@ -33,7 +31,6 @@ function Register(){
                 axios.post('http://localhost:3001/register',formData)
                 .then(res=>{
                     if(res.data==="Success"){
-                        setUser(formData.username)
                         navigate('/login')
                     }
                     else if(res.data==="Email Already exist"){

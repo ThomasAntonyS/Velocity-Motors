@@ -30,12 +30,6 @@ Here's an overview:
 * React Router for navigation and Axios for send and recive data from database .
 * Responsive for Mobile devices ( 600px and below ) working on other screen size:smile:
 
-## Further Plans 
-
-* Creating User Profile 
-* Password Hashing  
-* Media Queries for tablets, laptops and desktop 
-
 ## Folder Structure :
 
 Frontend :
